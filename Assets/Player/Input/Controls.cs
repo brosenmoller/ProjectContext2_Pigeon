@@ -53,6 +53,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraLook"",
+                    ""type"": ""Value"",
+                    ""id"": ""a010b38f-7338-4d0a-8d54-13c43b13e511"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -73,7 +82,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -84,10 +93,21 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ecac5cd0-89ad-4838-888a-9f349501ce83"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""WS"",
@@ -103,10 +123,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""ae7ccf95-8e97-4559-b7ba-cbb623a76504"",
-                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Verical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -117,10 +137,21 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Verical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a40d8f4a-aa32-412b-9c5c-2ebea79d9e04"",
+                    ""path"": ""<Gamepad>/leftStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Verical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -128,21 +159,83 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Boost"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5bfc2908-2e3e-436f-990f-b608141a0728"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Boost"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d67e46d8-74fa-419a-9032-2fb8cacf084d"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""ScaleVector2(x=10,y=10)"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""CameraLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24b1adfe-7886-419e-8430-9a79d800bf2b"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""CameraLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard & Mouse"",
+            ""bindingGroup"": ""Keyboard & Mouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_Horizontal = m_GamePlay.FindAction("Horizontal", throwIfNotFound: true);
         m_GamePlay_Verical = m_GamePlay.FindAction("Verical", throwIfNotFound: true);
         m_GamePlay_Boost = m_GamePlay.FindAction("Boost", throwIfNotFound: true);
+        m_GamePlay_CameraLook = m_GamePlay.FindAction("CameraLook", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +300,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_GamePlay_Horizontal;
     private readonly InputAction m_GamePlay_Verical;
     private readonly InputAction m_GamePlay_Boost;
+    private readonly InputAction m_GamePlay_CameraLook;
     public struct GamePlayActions
     {
         private @Controls m_Wrapper;
@@ -214,6 +308,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Horizontal => m_Wrapper.m_GamePlay_Horizontal;
         public InputAction @Verical => m_Wrapper.m_GamePlay_Verical;
         public InputAction @Boost => m_Wrapper.m_GamePlay_Boost;
+        public InputAction @CameraLook => m_Wrapper.m_GamePlay_CameraLook;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +327,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Boost.started += instance.OnBoost;
             @Boost.performed += instance.OnBoost;
             @Boost.canceled += instance.OnBoost;
+            @CameraLook.started += instance.OnCameraLook;
+            @CameraLook.performed += instance.OnCameraLook;
+            @CameraLook.canceled += instance.OnCameraLook;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -245,6 +343,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Boost.started -= instance.OnBoost;
             @Boost.performed -= instance.OnBoost;
             @Boost.canceled -= instance.OnBoost;
+            @CameraLook.started -= instance.OnCameraLook;
+            @CameraLook.performed -= instance.OnCameraLook;
+            @CameraLook.canceled -= instance.OnCameraLook;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -262,10 +363,29 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         }
     }
     public GamePlayActions @GamePlay => new GamePlayActions(this);
+    private int m_KeyboardMouseSchemeIndex = -1;
+    public InputControlScheme KeyboardMouseScheme
+    {
+        get
+        {
+            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("Keyboard & Mouse");
+            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     public interface IGamePlayActions
     {
         void OnHorizontal(InputAction.CallbackContext context);
         void OnVerical(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
+        void OnCameraLook(InputAction.CallbackContext context);
     }
 }
