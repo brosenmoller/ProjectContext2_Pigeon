@@ -485,9 +485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSpeed: 70
-  maxSpeed: 140
+  maxSpeed: 160
   minSpeed: 50
-  speedIncrease: 1
+  speedIncrease: 0.6
   speedDecrease: 0.25
   verticalRotationSpeed: 100
   horizontalRotationSpeed: 100

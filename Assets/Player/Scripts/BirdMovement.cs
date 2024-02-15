@@ -19,8 +19,6 @@ public class BirdMovement : MonoBehaviour
     [SerializeField] private Transform body;
     [SerializeField] private Transform head;
 
-    private Controls controls;
-
     private float horizontal;
     private float vertical;
 
@@ -29,15 +27,7 @@ public class BirdMovement : MonoBehaviour
 
     private void Awake()
     {
-        controls = new Controls();
-        controls.Enable();
-
         velocity = startSpeed;
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
     }
 
     private void Start()
@@ -45,10 +35,10 @@ public class BirdMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        controls.GamePlay.Horizontal.performed += ctx => horizontal = ctx.ReadValue<float>();
-        controls.GamePlay.Verical.performed += ctx => vertical = ctx.ReadValue<float>();
-        controls.GamePlay.Horizontal.canceled += _ => horizontal = 0;
-        controls.GamePlay.Verical.canceled += _ => vertical = 0;
+        GameManager.InputManager.controls.GamePlay.Horizontal.performed += ctx => horizontal = ctx.ReadValue<float>();
+        GameManager.InputManager.controls.GamePlay.Verical.performed += ctx => vertical = ctx.ReadValue<float>();
+        GameManager.InputManager.controls.GamePlay.Horizontal.canceled += _ => horizontal = 0;
+        GameManager.InputManager.controls.GamePlay.Verical.canceled += _ => vertical = 0;
     }
 
     private void Update()
@@ -64,7 +54,6 @@ public class BirdMovement : MonoBehaviour
 
         // Body Rotation
         Quaternion targetRotation = Quaternion.Euler(body.localRotation.x, 180, horizontal * bodyMaxRotation);
-        Debug.Log(body.localRotation.y);
         body.localRotation = Quaternion.RotateTowards(body.localRotation, targetRotation, bodyRotationSpeed);
     }
 

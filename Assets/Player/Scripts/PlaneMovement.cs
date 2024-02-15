@@ -14,31 +14,18 @@ public class PlaneMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform body;
 
-    private Controls controls;
-
     private float direction;
     private float elevation;
-
-    private void Awake()
-    {
-        controls = new Controls();
-        controls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
-    }
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        controls.GamePlay.Horizontal.performed += ctx => direction = ctx.ReadValue<float>();
-        controls.GamePlay.Verical.performed += ctx => elevation = ctx.ReadValue<float>();
-        controls.GamePlay.Horizontal.canceled += _ => direction = 0;
-        controls.GamePlay.Verical.canceled += _ => elevation = 0;
+        GameManager.InputManager.controls.GamePlay.Horizontal.performed += ctx => direction = ctx.ReadValue<float>();
+        GameManager.InputManager.controls.GamePlay.Verical.performed += ctx => elevation = ctx.ReadValue<float>();
+        GameManager.InputManager.controls.GamePlay.Horizontal.canceled += _ => direction = 0;
+        GameManager.InputManager.controls.GamePlay.Verical.canceled += _ => elevation = 0;
     }
 
     private void Update()
