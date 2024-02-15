@@ -43,9 +43,6 @@ public class PlaneMovement : MonoBehaviour
 
     private void Update()
     {
-        //int direction = (int)Input.GetAxisRaw("Horizontal");
-        //int elevation = (int)Input.GetAxisRaw("Vertical");
-
         // Movement
         transform.position += -1f * movementSpeed * Time.deltaTime * transform.forward;
         transform.Rotate(direction * rotationSpeed * Time.deltaTime * Vector3.up);
