@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 88043139}
   - component: {fileID: 88043138}
   - component: {fileID: 88043137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 193706431}
   - component: {fileID: 193706430}
   - component: {fileID: 193706429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 279923843}
   - component: {fileID: 279923842}
   - component: {fileID: 279923841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -438,37 +438,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279923839}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &308094559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 308094560}
-  m_Layer: 0
-  m_Name: CameraLook
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &308094560
+--- !u!4 &308094560 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 9156052449677666877, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7459331836639356320}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308094559}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.35, z: 11.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 996824909}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +628,7 @@ GameObject:
   - component: {fileID: 364252836}
   - component: {fileID: 364252835}
   - component: {fileID: 364252834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +665,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -758,7 +733,7 @@ GameObject:
   - component: {fileID: 371768332}
   - component: {fileID: 371768331}
   - component: {fileID: 371768330}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +770,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -863,7 +838,7 @@ GameObject:
   - component: {fileID: 402093318}
   - component: {fileID: 402093317}
   - component: {fileID: 402093316}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +875,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1165,7 +1140,7 @@ GameObject:
   - component: {fileID: 480873174}
   - component: {fileID: 480873173}
   - component: {fileID: 480873172}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1177,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1270,7 +1245,7 @@ GameObject:
   - component: {fileID: 560139021}
   - component: {fileID: 560139020}
   - component: {fileID: 560139019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1282,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1375,7 +1350,7 @@ GameObject:
   - component: {fileID: 788991012}
   - component: {fileID: 788991011}
   - component: {fileID: 788991010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1387,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1601,7 +1576,7 @@ GameObject:
   - component: {fileID: 899720251}
   - component: {fileID: 899720250}
   - component: {fileID: 899720249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1613,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1712,7 +1687,7 @@ GameObject:
   - component: {fileID: 1012687255}
   - component: {fileID: 1012687254}
   - component: {fileID: 1012687253}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1749,7 +1724,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1944,7 +1919,7 @@ GameObject:
   - component: {fileID: 1085684111}
   - component: {fileID: 1085684110}
   - component: {fileID: 1085684109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,7 +1956,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2049,7 +2024,7 @@ GameObject:
   - component: {fileID: 1134967760}
   - component: {fileID: 1134967759}
   - component: {fileID: 1134967758}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2086,7 +2061,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2293,7 +2268,7 @@ GameObject:
   - component: {fileID: 1253030372}
   - component: {fileID: 1253030371}
   - component: {fileID: 1253030370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2305,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2398,7 +2373,7 @@ GameObject:
   - component: {fileID: 1267890096}
   - component: {fileID: 1267890095}
   - component: {fileID: 1267890094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,7 +2410,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2503,7 +2478,7 @@ GameObject:
   - component: {fileID: 1321363691}
   - component: {fileID: 1321363690}
   - component: {fileID: 1321363689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2515,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2608,7 +2583,7 @@ GameObject:
   - component: {fileID: 1323275898}
   - component: {fileID: 1323275897}
   - component: {fileID: 1323275896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2645,7 +2620,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2713,7 +2688,7 @@ GameObject:
   - component: {fileID: 1407791847}
   - component: {fileID: 1407791846}
   - component: {fileID: 1407791845}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2750,7 +2725,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2818,7 +2793,7 @@ GameObject:
   - component: {fileID: 1464290229}
   - component: {fileID: 1464290228}
   - component: {fileID: 1464290227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2855,7 +2830,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2923,7 +2898,7 @@ GameObject:
   - component: {fileID: 1528842522}
   - component: {fileID: 1528842521}
   - component: {fileID: 1528842520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2960,7 +2935,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3283,7 +3258,7 @@ GameObject:
   - component: {fileID: 1626745302}
   - component: {fileID: 1626745301}
   - component: {fileID: 1626745300}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3320,7 +3295,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3388,7 +3363,7 @@ GameObject:
   - component: {fileID: 1646406940}
   - component: {fileID: 1646406939}
   - component: {fileID: 1646406938}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3425,7 +3400,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3572,7 +3547,7 @@ GameObject:
   - component: {fileID: 1727818778}
   - component: {fileID: 1727818777}
   - component: {fileID: 1727818776}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3609,7 +3584,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3677,7 +3652,7 @@ GameObject:
   - component: {fileID: 1751758758}
   - component: {fileID: 1751758757}
   - component: {fileID: 1751758756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3714,7 +3689,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3909,7 +3884,7 @@ GameObject:
   - component: {fileID: 1860376953}
   - component: {fileID: 1860376952}
   - component: {fileID: 1860376951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3946,7 +3921,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4014,7 +3989,7 @@ GameObject:
   - component: {fileID: 1900866289}
   - component: {fileID: 1900866288}
   - component: {fileID: 1900866287}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4051,7 +4026,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4116,7 +4091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933330798}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4181,7 +4156,7 @@ GameObject:
   - component: {fileID: 1980752272}
   - component: {fileID: 1980752271}
   - component: {fileID: 1980752270}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4218,7 +4193,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4443,7 +4418,7 @@ GameObject:
   - component: {fileID: 2026272461}
   - component: {fileID: 2026272460}
   - component: {fileID: 2026272459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4480,7 +4455,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4548,7 +4523,7 @@ GameObject:
   - component: {fileID: 2082221368}
   - component: {fileID: 2082221367}
   - component: {fileID: 2082221366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4585,7 +4560,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4653,7 +4628,7 @@ GameObject:
   - component: {fileID: 2121138826}
   - component: {fileID: 2121138825}
   - component: {fileID: 2121138824}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4690,7 +4665,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4758,7 +4733,7 @@ GameObject:
   - component: {fileID: 2131050717}
   - component: {fileID: 2131050716}
   - component: {fileID: 2131050715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4795,7 +4770,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4863,7 +4838,7 @@ GameObject:
   - component: {fileID: 2143276289}
   - component: {fileID: 2143276288}
   - component: {fileID: 2143276287}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4885,11 +4860,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2143276288
@@ -4952,7 +4927,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -8.98, z: 0}
-  m_LocalScale: {x: 272.48734, y: 272.48734, z: 272.48734}
+  m_LocalScale: {x: 272.48734, y: 1, z: 272.48734}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4965,6 +4940,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1844639857907864878, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 884304575}
+    - target: {fileID: 7930426579760081279, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930426579760081279, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8035363394885339974, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
       propertyPath: m_Name
@@ -4974,41 +4964,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: boostCooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: boostDuration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: boostStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: trackingSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: birdMovementMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: boostAcceleration
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: boostDecceleration
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8710700800484872483, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
@@ -5062,11 +5017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8710700800484872483, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 308094560}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc7852b8426d20e4e9412e0a7f5890e5, type: 3}
 --- !u!1660057539 &9223372036854775807

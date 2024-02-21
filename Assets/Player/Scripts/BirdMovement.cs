@@ -181,4 +181,9 @@ public class BirdMovement : MonoBehaviour
         inBoost = false;
      
     }
+
+    public void ResetVelocity()
+    {
+        velocity = 0f;
+    }
 }
