@@ -29,12 +29,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Horizontal"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""29491af4-46e6-4ab0-89fc-3e8a8041ee7c"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Verical"",
@@ -180,7 +180,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""id"": ""d67e46d8-74fa-419a-9032-2fb8cacf084d"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=10,y=10)"",
+                    ""processors"": ""ScaleVector2(x=10,y=-10)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""CameraLook"",
                     ""isComposite"": false,

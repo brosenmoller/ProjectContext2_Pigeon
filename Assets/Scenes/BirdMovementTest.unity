@@ -556,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000012453248, y: 0.9954401, z: -0.0953888, w: -0.000000012995724}
+  m_LocalRotation: {x: 8.2064805e-10, y: 0.9954401, z: -0.09538879, w: 0.000000008563962}
   m_LocalPosition: {x: 0, y: 100, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1542,7 +1542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884304573}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000012453248, y: 0.9954401, z: -0.0953888, w: -0.000000012995724}
+  m_LocalRotation: {x: 8.2064805e-10, y: 0.9954401, z: -0.09538879, w: 0.000000008563962}
   m_LocalPosition: {x: 0, y: 100, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4970,6 +4970,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigeonBird
       objectReference: {fileID: 0}
+    - target: {fileID: 8035363394885339974, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: boostCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: boostDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: boostStrength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: trackingSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: birdMovementMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: boostAcceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: boostDecceleration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8710700800484872483, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5033,6 +5073,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1195575656}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
@@ -5042,4 +5083,3 @@ SceneRoots:
   - {fileID: 2001400513}
   - {fileID: 884304574}
   - {fileID: 7459331836639356320}
-  - {fileID: 1195575656}

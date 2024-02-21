@@ -484,15 +484,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ce5f068fcd736479e13e2041e66a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 70
-  maxSpeed: 160
-  minSpeed: 50
-  speedIncrease: 0.6
-  speedDecrease: 0.25
+  birdMovementMode: 3
+  startSpeed: 60
+  maxSpeed: 120
+  minSpeed: 30
+  speedIncrease: 0.2
+  speedDecrease: 0.05
   verticalRotationSpeed: 100
   horizontalRotationSpeed: 100
-  bodyRotationSpeed: 2.5
-  bodyMaxRotation: 30
+  trackingOffset: 8
+  trackingMultiplier: 1
+  trackingSpeed: 2
+  trackingMax: {x: 10, y: 10}
+  bodyRotationSpeed: 5
+  bodyMaxRotation: 40
   body: {fileID: 8717741401629189442}
   head: {fileID: 7933304919225232803}
   velocity: 0
