@@ -449,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8710700800484872483}
   - component: {fileID: 8694745399590752247}
+  - component: {fileID: 1844639857907864878}
   m_Layer: 0
   m_Name: PigeonBird
   m_TagString: Untagged
@@ -470,6 +471,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8717741401629189442}
+  - {fileID: 9156052449677666877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8694745399590752247
@@ -484,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ce5f068fcd736479e13e2041e66a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdMovementMode: 3
+  birdMovementMode: 2
   startSpeed: 60
   maxSpeed: 120
   minSpeed: 30
@@ -492,12 +494,66 @@ MonoBehaviour:
   speedDecrease: 0.05
   verticalRotationSpeed: 100
   horizontalRotationSpeed: 100
-  trackingOffset: 8
-  trackingMultiplier: 1
-  trackingSpeed: 2
-  trackingMax: {x: 10, y: 10}
+  trackingSpeed: 10
+  boostStrength: 2
+  boostAcceleration: 1500
+  boostDuration: 0.5
+  boostDecceleration: 300
+  boostCooldown: 0.5
   bodyRotationSpeed: 5
   bodyMaxRotation: 40
   body: {fileID: 8717741401629189442}
   head: {fileID: 7933304919225232803}
   velocity: 0
+--- !u!114 &1844639857907864878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035363394885339974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e0ce11da87d3648a0fcd002f8b4cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnHeight: 122.8
+  respawnDelay: 0.5
+  point0: {x: 0, y: 0, z: -3.15}
+  point1: {x: 0, y: 0, z: 3.08}
+  radius: 0.84
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  camera: {fileID: 0}
+--- !u!1 &9216340580089704524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9156052449677666877}
+  m_Layer: 0
+  m_Name: CameraLook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9156052449677666877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216340580089704524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.35, z: 11.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8710700800484872483}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
