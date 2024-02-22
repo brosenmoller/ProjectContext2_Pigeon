@@ -4,6 +4,6 @@ using UnityEngine;
 public class Story : ScriptableObject
 {
     public string title;
-    public string story;
-    public AudioClip narrationClip;
+    public string[] stories;
+    public AudioClip[] narrationClips;
 }
