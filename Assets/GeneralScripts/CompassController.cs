@@ -10,11 +10,16 @@ public class CompassController : MonoBehaviour
 
     [Header("Scene References")]
     [SerializeField] private Transform cameraObjectTransform;
-    [SerializeField] private Transform objectiveObjectTransform;
+
+    [HideInInspector] public Transform objectiveObjectTransform;
 
     private void Update()
     {
-        SetMarkerPosition(objectiveMarkerTransform, objectiveObjectTransform.position);
+        if (objectiveObjectTransform != null)
+        {
+            SetMarkerPosition(objectiveMarkerTransform, objectiveObjectTransform.position);
+        }
+
         //SetMarkerPosition(north_markerTransform, Vector3.forward * 1000);
         //SetMarkerPosition(south_markerTransform, Vector3.back * 1000);
     }

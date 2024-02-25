@@ -16,9 +16,13 @@ public class PlayerRespawn : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private GameObject deathParticles;
+    [SerializeField] private Transform body;
 
     private Collider[] colliderAllocation;
     private BirdMovement birdMovement;
+
+    private bool isDying;
 
     private void Awake()
     {
@@ -30,9 +34,20 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (Physics.OverlapCapsuleNonAlloc(transform.position + point0, transform.position + point1, radius, colliderAllocation, groundMask) > 0)
         {
-            Invoke(nameof(Respawn), respawnDelay);
-            birdMovement.enabled = false;
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        if (isDying) { return; }
+
+        isDying = true;
+        body.gameObject.SetActive(false);
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+
+        birdMovement.enabled = false;
+        Invoke(nameof(Respawn), respawnDelay);
     }
 
     private void Respawn()
@@ -40,9 +55,11 @@ public class PlayerRespawn : MonoBehaviour
         Vector3 oldPosition = transform.position; 
         transform.position = new Vector3(transform.position.x, respawnHeight, transform.position.z);
 
+        body.gameObject.SetActive(true);
         birdMovement.enabled = true;
         birdMovement.ResetVelocity();
         birdMovement.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        isDying = false;
 
         if (virtualCamera != null) { virtualCamera.OnTargetObjectWarped(transform, transform.position - oldPosition); }
     }

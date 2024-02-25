@@ -25,6 +25,11 @@ public class CityObjectLevel : MonoBehaviour
 
     private void SetLevel(int level)
     {
+        if (level >= children.Length)
+        {
+            return;
+        }
+
         for (int i = 0; i < children.Length; i++)
         {
             if (i == level)

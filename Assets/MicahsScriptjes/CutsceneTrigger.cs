@@ -17,21 +17,34 @@ public class CutsceneTrigger : MonoBehaviour
     [SerializeField] private float cutsceneLength;
     [SerializeField] private Transform cutsceneLocation;
     [SerializeField] private Transform endLocation;
-    [HideInInspector] public bool isTarget;
+    [SerializeField] private MeshRenderer pillarRenderer;
+
+    private bool isTarget;
+    public bool IsTarget 
+    { 
+        get { return isTarget; }
+        set
+        {
+            isTarget = value;
+            pillarRenderer.enabled = value;
+        }
+    }
+
     void Start()
     {
         postMatController = FindObjectOfType<PostMatController>();
         cutsceneManager = FindObjectOfType<CutsceneManager>();
     }
+
     private void OnTriggerEnter(Collider col)
     {
         // if player enters cutscene zone, play cutscene
-        if (col.TryGetComponent(out BirdMovement birdMovement) && isTarget)
+        if (col.TryGetComponent(out BirdMovement birdMovement) && IsTarget)
         {
             GameObject playerRef = col.gameObject;
             StartCoroutine(CutsceneRoutine(birdMovement, playerRef));
             cutsceneManager.currentStory = story;
-            isTarget = false;
+            IsTarget = false;
         }
     }
 
