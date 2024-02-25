@@ -2612,8 +2612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 214.9696}
-  m_SizeDelta: {x: 355.1613, y: 44.0608}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 355.1613, y: 30.5934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099488861
 MonoBehaviour:
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4535,8 +4535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compass_barTransform: {fileID: 1099488860}
   objective_markerTransform: {fileID: 644667490}
-  north_markerTransform: {fileID: 0}
-  south_markerTransform: {fileID: 0}
+  north_markerTransform: {fileID: 1226485232}
+  south_markerTransform: {fileID: 784973904}
   cameraObjectTransform: {fileID: 330585546}
   objectiveObjectTransform: {fileID: 1026536752}
 --- !u!1 &1751758754

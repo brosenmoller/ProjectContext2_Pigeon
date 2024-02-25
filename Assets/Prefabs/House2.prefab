@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7155281703575778295}
-  m_Layer: 0
+  - component: {fileID: 3417820853515755408}
+  m_Layer: 3
   m_Name: House2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +35,27 @@ Transform:
   - {fileID: 8107232849182661367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3417820853515755408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9030829011980668852}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58445567, y: 1.1823137, z: 0.4623429}
+  m_Center: {x: 0.0074492395, y: 0.5804013, z: 0.0064421743}
 --- !u!1001 &2597791717791002483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House2Lvl2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62a34e0f4f156ba44a77a06578b33af5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 62a34e0f4f156ba44a77a06578b33af5,
         type: 3}
@@ -183,6 +210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aecfa75af90663243bc75b5828c5bcbc,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aecfa75af90663243bc75b5828c5bcbc,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -259,6 +291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House2Lvl1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a78daf46db05ed4f8595e99a1ebf7ac,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a78daf46db05ed4f8595e99a1ebf7ac,
         type: 3}

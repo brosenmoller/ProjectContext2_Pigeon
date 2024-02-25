@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7394694707381644545}
-  m_Layer: 0
+  - component: {fileID: 99299229844364518}
+  m_Layer: 3
   m_Name: House4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +35,27 @@ Transform:
   - {fileID: 2000951333817063872}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &99299229844364518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6328597753110689217}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.72470737, y: 1.2161944, z: 0.4623429}
+  m_Center: {x: -0.0016695857, y: 0.56346095, z: 0.0064421743}
 --- !u!1001 &2039699483184332331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House4Lvl1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8fd3ae61ff431664583199b807cf5ec6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8fd3ae61ff431664583199b807cf5ec6,
         type: 3}
@@ -183,6 +210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2916b090b7f1abc449cc3050a0c976b4,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2916b090b7f1abc449cc3050a0c976b4,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -264,6 +296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House4Lvl3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5da37bab968056542b12a33c696a36d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5da37bab968056542b12a33c696a36d6,
         type: 3}
