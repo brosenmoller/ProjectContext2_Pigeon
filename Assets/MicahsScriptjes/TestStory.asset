@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Test Title
   stories:
-  - subtitle test 1
-  - subtitle test 2
-  - subtitle test 3
-  narrationClips:
-  - {fileID: 8300000, guid: 4546759ebb91462438c5eea9e7da7798, type: 3}
-  - {fileID: 8300000, guid: 1f5f5269b83b72648bd9aa9633d29c75, type: 3}
-  - {fileID: 8300000, guid: 9c15b80ccd1ec474f9c2570cf9c7b11e, type: 3}
+  - subtitle: subtitle test 1
+    audioClip: {fileID: 8300000, guid: 4546759ebb91462438c5eea9e7da7798, type: 3}
+  - subtitle: subtitle test 2
+    audioClip: {fileID: 8300000, guid: 1f5f5269b83b72648bd9aa9633d29c75, type: 3}
+  - subtitle: subtitle test 3
+    audioClip: {fileID: 8300000, guid: 9c15b80ccd1ec474f9c2570cf9c7b11e, type: 3}
+  - subtitle: subtitle test 3
+    audioClip: {fileID: 8300000, guid: 9c15b80ccd1ec474f9c2570cf9c7b11e, type: 3}
+  - subtitle: subtitle test 3
+    audioClip: {fileID: 8300000, guid: 9c15b80ccd1ec474f9c2570cf9c7b11e, type: 3}

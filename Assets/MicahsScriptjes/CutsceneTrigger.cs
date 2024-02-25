@@ -42,28 +42,35 @@ public class CutsceneTrigger : MonoBehaviour
         Time.timeScale = slowMotionIntensity;
         Time.fixedDeltaTime = fixedDeltaTimeConst * (1-slowMotionIntensity);
         yield return new WaitForSecondsRealtime(cutsceneDelay);
+
         // move player to cutscene location
+        Vector3 startPos = playerRef.transform.position;
         playerRef.transform.position = cutsceneLocation.position;
         playerRef.transform.rotation = cutsceneLocation.rotation;
         birdMovement.enabled = false;
         ICinemachineCamera virtualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
-        virtualCamera.OnTargetObjectWarped(Camera.main.transform, cutsceneLocation.position);
+        virtualCamera.OnTargetObjectWarped(playerRef.transform, cutsceneLocation.position - startPos);
+
         // fade in to cutscene
         postMatController.fadeTarget = fadeMin;
         Time.timeScale = timeScaleConst;
         Time.fixedDeltaTime = fixedDeltaTimeConst;
         cutsceneManager.StoryIntro(cutsceneLength);
         yield return new WaitForSecondsRealtime(cutsceneLength);
+
         // fade out to cutscene
         postMatController.fadeTarget = fadeMax;
         yield return new WaitForSecondsRealtime(cutsceneDelay);
+
         // move player back to flying position
         postMatController.fadeTarget = fadeMin;
         birdMovement.enabled = true;
+        startPos = playerRef.transform.position;
         playerRef.transform.position = endLocation.position;
         playerRef.transform.rotation = endLocation.rotation;
-        virtualCamera.OnTargetObjectWarped(Camera.main.transform, endLocation.position);
+        virtualCamera.OnTargetObjectWarped(playerRef.transform, cutsceneLocation.position - startPos);
         cutsceneManager.PlayStory();
+
         // set new cutscene
         cutsceneManager.SetCurrentScene();
         yield return null;

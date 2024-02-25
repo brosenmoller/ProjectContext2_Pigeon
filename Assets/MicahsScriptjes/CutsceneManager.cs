@@ -67,11 +67,11 @@ public class CutsceneManager : MonoBehaviour
     private IEnumerator NarrationRoutine()
     {
         storyObject.SetActive(true);
-        for (int i = 0; i < currentStory.stories.Length; i++)
+        foreach (var story in currentStory.stories)
         {
-            storyText.text = currentStory.stories[i];
-            audioSource.PlayOneShot(currentStory.narrationClips[i]);
-            yield return new WaitForSeconds(currentStory.narrationClips[i].length + subtitleDelay);
+            storyText.text = story.subtitle;
+            audioSource.PlayOneShot(story.audioClip);
+            yield return new WaitForSeconds(story.audioClip.length + subtitleDelay);
         }
         storyObject.SetActive(false);
         yield return null;

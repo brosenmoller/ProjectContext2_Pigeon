@@ -62,7 +62,6 @@ namespace PathCreation.Examples {
 						triangles.Add (startIndex + (currentRes + 1) % resolutionU + resolutionU);
 						triangles.Add (startIndex + currentRes + resolutionU);
 					}
-
 				}
 			}
 
