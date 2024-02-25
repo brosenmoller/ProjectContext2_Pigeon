@@ -4533,10 +4533,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec2ed401ba737d428b2c3c743207704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compass_barTransform: {fileID: 1099488860}
-  objective_markerTransform: {fileID: 644667490}
-  north_markerTransform: {fileID: 1226485232}
-  south_markerTransform: {fileID: 784973904}
+  compassBarTransform: {fileID: 1099488860}
+  objectiveMarkerTransform: {fileID: 644667490}
+  northMarkerTransform: {fileID: 1226485232}
+  southMarkerTransform: {fileID: 784973904}
   cameraObjectTransform: {fileID: 330585546}
   objectiveObjectTransform: {fileID: 1026536752}
 --- !u!1 &1751758754

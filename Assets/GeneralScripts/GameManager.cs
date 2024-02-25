@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class GameManager : MonoBehaviour
     public static InputManager InputManager { get; private set; }
 
     private Manager[] activeManagers;
+
+
+    public event Action<int> OnCityLevelChange;
+    public void InvokeCityLevelChange(int level) => OnCityLevelChange?.Invoke(level);
+
 
     private void Awake()
     {

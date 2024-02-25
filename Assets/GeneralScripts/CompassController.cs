@@ -3,10 +3,10 @@ using UnityEngine;
 public class CompassController : MonoBehaviour
 {
     [Header("UI References")] 
-    [SerializeField] private RectTransform compass_barTransform;
-    [SerializeField] private RectTransform objective_markerTransform;
-    [SerializeField] private RectTransform north_markerTransform;
-    [SerializeField] private RectTransform south_markerTransform;
+    [SerializeField] private RectTransform compassBarTransform;
+    [SerializeField] private RectTransform objectiveMarkerTransform;
+    [SerializeField] private RectTransform northMarkerTransform;
+    [SerializeField] private RectTransform southMarkerTransform;
 
     [Header("Scene References")]
     [SerializeField] private Transform cameraObjectTransform;
@@ -14,7 +14,7 @@ public class CompassController : MonoBehaviour
 
     private void Update()
     {
-        SetMarkerPosition(objective_markerTransform, objectiveObjectTransform.position);
+        SetMarkerPosition(objectiveMarkerTransform, objectiveObjectTransform.position);
         //SetMarkerPosition(north_markerTransform, Vector3.forward * 1000);
         //SetMarkerPosition(south_markerTransform, Vector3.back * 1000);
     }
@@ -29,6 +29,6 @@ public class CompassController : MonoBehaviour
         );
 
         float compassPositionX = Mathf.Clamp(2 * angle / Camera.main.fieldOfView, -1, 1);
-        markerTransform.anchoredPosition = new Vector2(compass_barTransform.rect.width / 2 * compassPositionX, 0);
+        markerTransform.anchoredPosition = new Vector2(compassBarTransform.rect.width / 2 * compassPositionX, 0);
     }
 }

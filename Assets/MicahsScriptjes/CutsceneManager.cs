@@ -30,8 +30,10 @@ public class CutsceneManager : MonoBehaviour
         {
             return;
         }
+
         // set scene according to array order
         currentScene++;
+        GameManager.Instance.InvokeCityLevelChange(currentScene);
         for (int i = 0; i < cutsceneTriggers.Length; i++)
         {
             if (currentScene == i)

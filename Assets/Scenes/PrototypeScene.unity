@@ -7190,10 +7190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec2ed401ba737d428b2c3c743207704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compass_barTransform: {fileID: 1172241942}
-  objective_markerTransform: {fileID: 355587815}
-  north_markerTransform: {fileID: 63388965}
-  south_markerTransform: {fileID: 66930173}
+  compassBarTransform: {fileID: 1172241942}
+  objectiveMarkerTransform: {fileID: 355587815}
+  northMarkerTransform: {fileID: 63388965}
+  southMarkerTransform: {fileID: 66930173}
   cameraObjectTransform: {fileID: 926671306}
   objectiveObjectTransform: {fileID: 2063434674}
 --- !u!114 &2023036226
@@ -7321,6 +7321,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1227531964138220023, guid: 0cdbc7a175c840f4fa9105d4c34cbcea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1838497307960180252, guid: 0cdbc7a175c840f4fa9105d4c34cbcea,
         type: 3}
       propertyPath: m_LocalScale.x
