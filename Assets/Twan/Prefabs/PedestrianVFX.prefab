@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1445516380737733936}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 158, y: -6.48, z: -168}
+  m_LocalPosition: {x: 158, y: -4.18, z: -168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51,8 +51,11 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 15
+      - m_Value: 25
         m_Name: size
+        m_Overridden: 1
+      - m_Value: 1000
+        m_Name: spawnRate
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -83,7 +86,10 @@ VisualEffect:
     m_Gradient:
       m_Array: []
     m_NamedObject:
-      m_Array: []
+      m_Array:
+      - m_Value: {fileID: 2800000, guid: 7fc44190ed5638c44b6aec4a8286af29, type: 3}
+        m_Name: spriteSheet
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!73398921 &960107889986049807
