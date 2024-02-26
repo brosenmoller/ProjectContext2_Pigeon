@@ -54,6 +54,8 @@ public class CutsceneTrigger : MonoBehaviour
         postMatController.fadeTarget = fadeMax;
         Time.timeScale = slowMotionIntensity;
         Time.fixedDeltaTime = fixedDeltaTimeConst * (1-slowMotionIntensity);
+        PlayerRespawn playerRespawn = playerRef.GetComponent<PlayerRespawn>();
+        playerRespawn.enabled = false;
         yield return new WaitForSecondsRealtime(cutsceneDelay);
 
         // move player to cutscene location
@@ -78,6 +80,7 @@ public class CutsceneTrigger : MonoBehaviour
         // move player back to flying position
         postMatController.fadeTarget = fadeMin;
         birdMovement.enabled = true;
+        playerRespawn.enabled = true;
         startPos = playerRef.transform.position;
         playerRef.transform.position = endLocation.position;
         playerRef.transform.rotation = endLocation.rotation;
@@ -86,6 +89,5 @@ public class CutsceneTrigger : MonoBehaviour
 
         // set new cutscene
         cutsceneManager.SetCurrentScene();
-        yield return null;
     }
 }
