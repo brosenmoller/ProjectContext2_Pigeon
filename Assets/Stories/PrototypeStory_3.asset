@@ -14,22 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Prototype Story 3
   stories:
-  - subtitle: Me and my little girls have been here for 3 years already
+  - subtitle: 'Good to see you Pigeon, '
     audioClip: {fileID: 0}
-  - subtitle: I love living here in Utrecht because, in the Netherlands, there is
-      so much freedom for me as a woman.
+  - subtitle: As a human activist my life quickly got in danger.
     audioClip: {fileID: 0}
-  - subtitle: "That\u2019s what I want for my daughters as well."
+  - subtitle: The organization I was working with invited me over to the Netherlands.
     audioClip: {fileID: 0}
-  - subtitle: 'Sadly, it can be very difficult here for a single mother without papers
-      to get permanent residence and schooling for my kids. '
+  - subtitle: After spending 3 months in a refugee camp I was able to stay in Utrecht.
     audioClip: {fileID: 0}
-  - subtitle: ' In the time we have been here, my kids had to change schools 4 times
-      already.'
+  - subtitle: My English has gotten better hasn't it?
     audioClip: {fileID: 0}
-  - subtitle: This makes it difficult for them to settle here.
+  - subtitle: When I came here I made a friend that would help me become comfortable
+      with the education system.
     audioClip: {fileID: 0}
-  - subtitle: I wish there was more support for single mothers without papers.
+  - subtitle: And in return a friendship was bonded and my English improved as well.
     audioClip: {fileID: 0}
-  - subtitle: I have this as a placeholder story, hope that's ok
+  - subtitle: 'In Utrecht there''s still lot of negative impressions of people like
+      me. I wish people would be more open minded like my friend.  '
     audioClip: {fileID: 0}
