@@ -13,6 +13,7 @@ public class BirdMovement : MonoBehaviour
 {
     [Header("Mode")]
     [SerializeField] private BirdMovementMode birdMovementMode;
+    [SerializeField] private bool autoMove;
 
     [Header("Speed Control")]
     [SerializeField] private float startSpeed;
@@ -20,6 +21,7 @@ public class BirdMovement : MonoBehaviour
     [SerializeField] private float minSpeed;
     [SerializeField] private float speedIncrease;
     [SerializeField] private float speedDecrease;
+    [SerializeField] private float stoppingDeceleration;
 
     [Header("Rotation Control")]
     [SerializeField] private float verticalRotationSpeed;
@@ -54,6 +56,8 @@ public class BirdMovement : MonoBehaviour
     private bool inBoost;
     private float boostVelocityIncrease;
 
+    private bool isMoving = false;
+
 
     private void Awake()
     {
@@ -72,6 +76,9 @@ public class BirdMovement : MonoBehaviour
 
         GameManager.InputManager.controls.GamePlay.CameraLook.performed += ctx => look = ctx.ReadValue<Vector2>();
         GameManager.InputManager.controls.GamePlay.CameraLook.canceled += _ => look = Vector2.zero;
+
+        GameManager.InputManager.controls.GamePlay.Forward.performed += _ => isMoving = true;
+        GameManager.InputManager.controls.GamePlay.Forward.canceled += _ => isMoving = false;
 
         GameManager.InputManager.controls.GamePlay.Boost.performed += _ => StartBoost();
     
@@ -98,7 +105,7 @@ public class BirdMovement : MonoBehaviour
     private void BasicMovement()
     {
         // Movement
-        transform.position += startSpeed * Time.deltaTime * transform.forward;
+        transform.position += startSpeed * Time.deltaTime * transform.forward * CanMove();
         transform.Rotate(horizontal * horizontalRotationSpeed * Time.deltaTime * Vector3.up);
         transform.position += -1f * vertical * (horizontalRotationSpeed / 2) * Time.deltaTime * Vector3.up;
 
@@ -127,9 +134,23 @@ public class BirdMovement : MonoBehaviour
 
     private void CalculateVelocity()
     {
+        if (!autoMove && !isMoving)
+        {
+            velocity -= stoppingDeceleration;
+        }
+        else
+        {
+            DefaultVelocity();
+        }
+
+        transform.position += velocity * Time.deltaTime * transform.forward * CanMove();
+    }
+
+    private void DefaultVelocity()
+    {
         float distanceTillStraight = Mathf.Abs(transform.rotation.x - 90);
         float speedChangeMultiplier = Mathf.InverseLerp(0, 90, distanceTillStraight);
-        
+
         if (transform.position.y > head.position.y)
         {
             velocity += speedIncrease * speedChangeMultiplier;
@@ -147,8 +168,12 @@ public class BirdMovement : MonoBehaviour
         {
             velocity = minSpeed;
         }
+    }
 
-        transform.position += velocity * Time.deltaTime * transform.forward;
+    private int CanMove()
+    {
+        if (autoMove || isMoving) { return 1; }
+        else { return 0; }
     }
 
     private IEnumerator Boost()

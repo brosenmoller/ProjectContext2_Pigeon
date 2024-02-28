@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public static TimerManager TimerManager { get; private set; }
     public static InputManager InputManager { get; private set; }
+    public static UIViewManager UIViewManager { get; private set; }
 
     private Manager[] activeManagers;
 
@@ -38,10 +39,12 @@ public class GameManager : MonoBehaviour
     {
         TimerManager = new TimerManager();
         InputManager = new InputManager();
+        UIViewManager = new UIViewManager();
 
         activeManagers = new Manager[] {
             TimerManager,
-            InputManager
+            InputManager,
+            UIViewManager,
         };
 
         foreach (Manager manager in activeManagers)

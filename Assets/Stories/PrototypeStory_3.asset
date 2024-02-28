@@ -16,19 +16,27 @@ MonoBehaviour:
   stories:
   - subtitle: 'Good to see you Pigeon, '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 840580276, guid: cca88225a25569e408431876416d850d, type: 3}
   - subtitle: As a human activist my life quickly got in danger.
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: The organization I was working with invited me over to the Netherlands.
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: After spending 3 months in a refugee camp I was able to stay in Utrecht.
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: My English has gotten better hasn't it?
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: When I came here I made a friend that would help me become comfortable
       with the education system.
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: And in return a friendship was bonded and my English improved as well.
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'In Utrecht there''s still lot of negative impressions of people like
       me. I wish people would be more open minded like my friend.  '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
