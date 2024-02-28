@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
+  m_Name: PrototypeStory_2
+  m_EditorClassIdentifier: 
+  title: Prototype Story 2
+  stories:
+  - subtitle: 'Isn''t this neighbourhood so nice? '
+    audioClip: {fileID: 0}
+  - subtitle: 'It''s been 5 years since my husband and children fled our home country
+      and we''re able to take shelter in the Netherlands. '
+    audioClip: {fileID: 0}
+  - subtitle: 'After half a year we were assigned a home in this calm area and immidiately
+      it felt like home. '
+    audioClip: {fileID: 0}
+  - subtitle: 'The families here are diverse and all the kids match their age with
+      ours! '
+    audioClip: {fileID: 0}
+  - subtitle: 'But most importantly, we feel safe here. '
+    audioClip: {fileID: 0}
+  - subtitle: 'We''re so grateful that the government is doing their best to support
+      us. '
+    audioClip: {fileID: 0}
+  - subtitle: 'My son is able to go to school again and I started a course that let''s
+      me become a teacher in the Netherlands. '
+    audioClip: {fileID: 0}
+  - subtitle: 'I wish everyone has the option to follow their dreams. '
+    audioClip: {fileID: 0}

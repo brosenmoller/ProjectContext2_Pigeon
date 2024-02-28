@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
+  m_Name: PrototypeStory_1
+  m_EditorClassIdentifier: 
+  title: Prototype Story 1
+  stories:
+  - subtitle: Me and my little girls have been here for 3 years already
+    audioClip: {fileID: 0}
+  - subtitle: I love living here in Utrecht because, in the Netherlands, there is
+      so much freedom for me as a woman.
+    audioClip: {fileID: 0}
+  - subtitle: "That\u2019s what I want for my daughters as well."
+    audioClip: {fileID: 0}
+  - subtitle: 'Sadly, it can be very difficult here for a single mother without papers
+      to get permanent residence and schooling for my kids. '
+    audioClip: {fileID: 0}
+  - subtitle: ' In the time we have been here, my kids had to change schools 4 times
+      already.'
+    audioClip: {fileID: 0}
+  - subtitle: This makes it difficult for them to settle here.
+    audioClip: {fileID: 0}
+  - subtitle: I wish there was more support for single mothers without papers.
+    audioClip: {fileID: 0}

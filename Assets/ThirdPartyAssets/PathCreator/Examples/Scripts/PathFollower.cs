@@ -10,6 +10,8 @@ namespace PathCreation.Examples
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
         float distanceTravelled;
+        [HideInInspector] public float playerOffset;
+        [HideInInspector] public Vector3 pathFollowerPos;
 
         void Start() {
             if (pathCreator != null)
@@ -24,8 +26,9 @@ namespace PathCreation.Examples
             if (pathCreator != null)
             {
                 distanceTravelled += speed * Time.deltaTime;
-                transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-                transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+                pathFollowerPos = pathCreator.path.GetPointAtDistance(distanceTravelled + playerOffset, endOfPathInstruction);
+                transform.position = pathFollowerPos;
+                transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + playerOffset, endOfPathInstruction);
             }
         }
 

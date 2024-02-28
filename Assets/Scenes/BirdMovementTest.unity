@@ -1536,7 +1536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &784973904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2765,7 +2765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1226485232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4385,8 +4385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compass_barTransform: {fileID: 1099488860}
   objective_markerTransform: {fileID: 644667490}
-  north_markerTransform: {fileID: 1226485232}
-  south_markerTransform: {fileID: 784973904}
+  north_markerTransform: {fileID: 0}
+  south_markerTransform: {fileID: 0}
   cameraObjectTransform: {fileID: 330585546}
   objectiveObjectTransform: {fileID: 1026536752}
 --- !u!1 &1751758754
