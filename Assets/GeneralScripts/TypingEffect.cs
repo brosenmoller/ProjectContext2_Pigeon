@@ -4,25 +4,32 @@ using System.Collections;
 
 public class TypingEffect : MonoBehaviour
 {
-    public float typingSpeed = 0.05f; // Adjust the speed as needed
     private TMP_Text textMeshPro;
-    private string fullText;
 
     void Start()
     {
         textMeshPro = GetComponent<TMP_Text>();
-        fullText = textMeshPro.text;
-        textMeshPro.text = ""; // Set the text to empty initially
-
-        StartCoroutine(TypeText());
     }
 
-    IEnumerator TypeText()
+    public void SetText(string text, float typingSpeed)
     {
-        foreach (char c in fullText)
+        float speedPerCharacter = typingSpeed / text.Length;
+
+        textMeshPro.text = "";
+        StartCoroutine(TypeText(text, speedPerCharacter));
+    }
+
+    public void ResetText()
+    {
+        textMeshPro.text = "";
+    }
+
+    private IEnumerator TypeText(string text, float speedPerCharacter)
+    {
+        foreach (char c in text)
         {
             textMeshPro.text += c.ToString();
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(speedPerCharacter);
         }
     }
 }

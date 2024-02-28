@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 8694745399590752247}
   - component: {fileID: 1844639857907864878}
   - component: {fileID: 1576043333497391610}
+  - component: {fileID: 6851507115409280960}
   m_Layer: 0
   m_Name: PigeonBird
   m_TagString: Untagged
@@ -527,6 +528,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   virtualCamera: {fileID: 0}
+  deathParticles: {fileID: 525038324136521209, guid: 883614c58a4d3704db35a0e5c37c65d5,
+    type: 3}
+  body: {fileID: 8717741401629189442}
 --- !u!136 &1576043333497391610
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -550,6 +554,24 @@ CapsuleCollider:
   m_Height: 8
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6851507115409280960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035363394885339974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4900a1867bba2469ca8db53289e032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insideTunnel: 0
+  onCooldown: 0
+  pathFollower: {fileID: 1779168796295788883, guid: 994fdb3a902bbbb44a4ac4de24772710,
+    type: 3}
+  currentPath: {fileID: 0}
+  snapSpeed: 4
 --- !u!1 &9216340580089704524
 GameObject:
   m_ObjectHideFlags: 0
