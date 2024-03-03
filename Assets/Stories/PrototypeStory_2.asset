@@ -16,22 +16,31 @@ MonoBehaviour:
   stories:
   - subtitle: 'Isn''t this neighbourhood so nice? '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: -1170931778, guid: cca88225a25569e408431876416d850d,
+      type: 3}
   - subtitle: 'It''s been 5 years since my husband and children fled our home country
       and we''re able to take shelter in the Netherlands. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'After half a year we were assigned a home in this calm area and immidiately
       it felt like home. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'The families here are diverse and all the kids match their age with
       ours! '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'But most importantly, we feel safe here. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'We''re so grateful that the government is doing their best to support
       us. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'My son is able to go to school again and I started a course that let''s
       me become a teacher in the Netherlands. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
   - subtitle: 'I wish everyone has the option to follow their dreams. '
     audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}

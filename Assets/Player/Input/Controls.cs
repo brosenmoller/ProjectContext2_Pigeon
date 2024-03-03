@@ -62,6 +62,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Forward"",
+                    ""type"": ""Button"",
+                    ""id"": ""4078b170-cf0c-4a1c-b162-cb1941511dfb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e8031bf-3be0-48f5-b7a6-edf0c6f55e01"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -178,7 +196,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d67e46d8-74fa-419a-9032-2fb8cacf084d"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=10,y=-10)"",
                     ""groups"": ""Gamepad"",
@@ -194,6 +212,39 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""CameraLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6086f2a2-208c-4aec-9594-05402bb363e3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Forward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5513d95-5c47-42bb-9273-d7a5cc6c28d5"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Forward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e901a069-1aac-42de-80c7-90f0c0fd7273"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -236,6 +287,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_GamePlay_Verical = m_GamePlay.FindAction("Verical", throwIfNotFound: true);
         m_GamePlay_Boost = m_GamePlay.FindAction("Boost", throwIfNotFound: true);
         m_GamePlay_CameraLook = m_GamePlay.FindAction("CameraLook", throwIfNotFound: true);
+        m_GamePlay_Forward = m_GamePlay.FindAction("Forward", throwIfNotFound: true);
+        m_GamePlay_Continue = m_GamePlay.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -301,6 +354,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_GamePlay_Verical;
     private readonly InputAction m_GamePlay_Boost;
     private readonly InputAction m_GamePlay_CameraLook;
+    private readonly InputAction m_GamePlay_Forward;
+    private readonly InputAction m_GamePlay_Continue;
     public struct GamePlayActions
     {
         private @Controls m_Wrapper;
@@ -309,6 +364,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Verical => m_Wrapper.m_GamePlay_Verical;
         public InputAction @Boost => m_Wrapper.m_GamePlay_Boost;
         public InputAction @CameraLook => m_Wrapper.m_GamePlay_CameraLook;
+        public InputAction @Forward => m_Wrapper.m_GamePlay_Forward;
+        public InputAction @Continue => m_Wrapper.m_GamePlay_Continue;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -330,6 +387,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @CameraLook.started += instance.OnCameraLook;
             @CameraLook.performed += instance.OnCameraLook;
             @CameraLook.canceled += instance.OnCameraLook;
+            @Forward.started += instance.OnForward;
+            @Forward.performed += instance.OnForward;
+            @Forward.canceled += instance.OnForward;
+            @Continue.started += instance.OnContinue;
+            @Continue.performed += instance.OnContinue;
+            @Continue.canceled += instance.OnContinue;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -346,6 +409,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @CameraLook.started -= instance.OnCameraLook;
             @CameraLook.performed -= instance.OnCameraLook;
             @CameraLook.canceled -= instance.OnCameraLook;
+            @Forward.started -= instance.OnForward;
+            @Forward.performed -= instance.OnForward;
+            @Forward.canceled -= instance.OnForward;
+            @Continue.started -= instance.OnContinue;
+            @Continue.performed -= instance.OnContinue;
+            @Continue.canceled -= instance.OnContinue;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -387,5 +456,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnVerical(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
         void OnCameraLook(InputAction.CallbackContext context);
+        void OnForward(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }

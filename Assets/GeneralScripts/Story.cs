@@ -12,5 +12,6 @@ public class Story : ScriptableObject
     {
         public string subtitle;
         public AudioClip audioClip;
+        public Sprite characterSprite;
     } 
 }

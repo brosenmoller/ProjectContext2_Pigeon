@@ -1,23 +1,34 @@
 using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CutsceneTrigger : MonoBehaviour
 {
-    private PostMatController postMatController;
-    private CutsceneManager cutsceneManager;
+    [Header("Story")]
+    [SerializeField] private Story story;
+
+    [Header("Cutscene Settings")]
+    [SerializeField, Range(0, 1)] private float slowMotionIntensity;
+    [SerializeField] private float cutsceneDelay;
+    [SerializeField] private float cutsceneLength;
+    [SerializeField] private float subtitleDelay;
+    [SerializeField] private bool requireKeyPressForNextLine;
+
+    [Header("References")]
+    [SerializeField] private Transform cutsceneElements;
+    [SerializeField] private Transform playerEndLocation;
+    [SerializeField] private MeshRenderer pillarRenderer;
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private AudioSource narrationSource;
+
     private const float fadeMax = 1.5f;
     private const float fadeMin = -1.5f;
     private const float timeScaleConst = 1f;
     private const float fixedDeltaTimeConst = 0.02f;
-    [SerializeField] private Story story;
-    [SerializeField, Range(0, 1)] private float slowMotionIntensity;
-    [SerializeField] private float cutsceneDelay;
-    [SerializeField] private float cutsceneLength;
-    [SerializeField] private Transform cutsceneLocation;
-    [SerializeField] private Transform endLocation;
-    [SerializeField] private MeshRenderer pillarRenderer;
+
+    private PostMatController postMatController;
+    private CutsceneManager cutsceneManager;
+    private CutSceneView cutSceneView;
 
     private bool isTarget;
     public bool IsTarget 
@@ -30,64 +41,107 @@ public class CutsceneTrigger : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         postMatController = FindObjectOfType<PostMatController>();
         cutsceneManager = FindObjectOfType<CutsceneManager>();
+
+        cutSceneView = (CutSceneView)GameManager.UIViewManager.GetView(typeof(CutSceneView));
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        // if player enters cutscene zone, play cutscene
         if (col.TryGetComponent(out BirdMovement birdMovement) && IsTarget)
         {
-            GameObject playerRef = col.gameObject;
-            StartCoroutine(CutsceneRoutine(birdMovement, playerRef));
+            GameObject player = col.gameObject;
+            StartCoroutine(CutsceneRoutine(birdMovement, player));
             cutsceneManager.currentStory = story;
             IsTarget = false;
         }
     }
 
-    private IEnumerator CutsceneRoutine(BirdMovement birdMovement, GameObject playerRef)
+    private IEnumerator CutsceneRoutine(BirdMovement birdMovement, GameObject player)
     {
         // fade out to cutscene
         postMatController.fadeTarget = fadeMax;
         Time.timeScale = slowMotionIntensity;
         Time.fixedDeltaTime = fixedDeltaTimeConst * (1-slowMotionIntensity);
-        PlayerRespawn playerRespawn = playerRef.GetComponent<PlayerRespawn>();
-        playerRespawn.enabled = false;
-        yield return new WaitForSecondsRealtime(cutsceneDelay);
 
-        // move player to cutscene location
-        Vector3 startPos = playerRef.transform.position;
-        playerRef.transform.position = cutsceneLocation.position;
-        playerRef.transform.rotation = cutsceneLocation.rotation;
-        birdMovement.enabled = false;
-        ICinemachineCamera virtualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
-        virtualCamera.OnTargetObjectWarped(playerRef.transform, cutsceneLocation.position - startPos);
+        PlayerRespawn playerRespawn = player.GetComponent<PlayerRespawn>();
+        playerRespawn.enabled = false;
+
+        yield return new WaitForSecondsRealtime(cutsceneDelay);
 
         // fade in to cutscene
         postMatController.fadeTarget = fadeMin;
         Time.timeScale = timeScaleConst;
         Time.fixedDeltaTime = fixedDeltaTimeConst;
-        cutsceneManager.StoryIntro(cutsceneLength);
-        yield return new WaitForSecondsRealtime(cutsceneLength);
+
+        // Setup Cutscene space
+        virtualCamera.Priority = 10;
+        cutsceneElements.gameObject.SetActive(true);
+        GameManager.UIViewManager.Show(typeof(CutSceneView));
+
+        player.transform.GetChild(0).gameObject.SetActive(false);
+        birdMovement.enabled = false;
+
+        yield return StartCoroutine(StoryRoutine());
+
 
         // fade out to cutscene
         postMatController.fadeTarget = fadeMax;
+        
+        // move player
+        player.transform.SetPositionAndRotation(playerEndLocation.position, playerEndLocation.rotation);
+
         yield return new WaitForSecondsRealtime(cutsceneDelay);
 
-        // move player back to flying position
+        // fade into normal gameplay
         postMatController.fadeTarget = fadeMin;
+
+        // reset Cutscene Elements
+        virtualCamera.Priority = 0;
+        cutsceneElements.gameObject.SetActive(false);
+        GameManager.UIViewManager.Show(typeof(GameView));
+
+        player.transform.GetChild(0).gameObject.SetActive(true);
         birdMovement.enabled = true;
         playerRespawn.enabled = true;
-        startPos = playerRef.transform.position;
-        playerRef.transform.position = endLocation.position;
-        playerRef.transform.rotation = endLocation.rotation;
-        virtualCamera.OnTargetObjectWarped(playerRef.transform, cutsceneLocation.position - startPos);
-        cutsceneManager.PlayStory();
 
-        // set new cutscene
+        // set new target
         cutsceneManager.SetCurrentScene();
+    }
+
+    private IEnumerator StoryRoutine()
+    {
+        cutSceneView.ResetText();
+        cutSceneView.ResetSprite();
+
+        foreach (Story.StoryLine storyLine in story.stories)
+        {
+            if (storyLine.characterSprite != null)
+            {
+                cutSceneView.SetSprite(storyLine.characterSprite);
+            }
+
+            if (storyLine.audioClip != null)
+            {
+                cutSceneView.SetText(storyLine.subtitle, storyLine.audioClip.length);
+                narrationSource.PlayOneShot(storyLine.audioClip);
+                yield return new WaitForSeconds(storyLine.audioClip.length + subtitleDelay);
+            }
+            else
+            {
+                cutSceneView.SetText(storyLine.subtitle, 3.0f);
+                yield return new WaitForSeconds(3.0f + subtitleDelay);
+            }
+
+            while (requireKeyPressForNextLine && !GameManager.InputManager.controls.GamePlay.Continue.WasPressedThisFrame())
+            {
+                yield return null;
+            }
+        }
+
+        cutSceneView.ResetText();
     }
 }
