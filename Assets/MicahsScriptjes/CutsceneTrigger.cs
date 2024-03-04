@@ -26,7 +26,7 @@ public class CutsceneTrigger : MonoBehaviour
     private const float timeScaleConst = 1f;
     private const float fixedDeltaTimeConst = 0.02f;
 
-    private PostMatController postMatController;
+    private FadeController fadeController;
     private CutsceneManager cutsceneManager;
     private CutSceneView cutSceneView;
 
@@ -43,7 +43,7 @@ public class CutsceneTrigger : MonoBehaviour
 
     private void Start()
     {
-        postMatController = FindObjectOfType<PostMatController>();
+        fadeController = FindObjectOfType<FadeController>();
         cutsceneManager = FindObjectOfType<CutsceneManager>();
 
         cutSceneView = (CutSceneView)GameManager.UIViewManager.GetView(typeof(CutSceneView));
@@ -63,7 +63,7 @@ public class CutsceneTrigger : MonoBehaviour
     private IEnumerator CutsceneRoutine(BirdMovement birdMovement, GameObject player)
     {
         // fade out to cutscene
-        postMatController.fadeTarget = fadeMax;
+        fadeController.fadeTarget = fadeMax;
         Time.timeScale = slowMotionIntensity;
         Time.fixedDeltaTime = fixedDeltaTimeConst * (1-slowMotionIntensity);
 
@@ -73,7 +73,7 @@ public class CutsceneTrigger : MonoBehaviour
         yield return new WaitForSecondsRealtime(cutsceneDelay);
 
         // fade in to cutscene
-        postMatController.fadeTarget = fadeMin;
+        fadeController.fadeTarget = fadeMin;
         Time.timeScale = timeScaleConst;
         Time.fixedDeltaTime = fixedDeltaTimeConst;
 
@@ -89,7 +89,7 @@ public class CutsceneTrigger : MonoBehaviour
 
 
         // fade out to cutscene
-        postMatController.fadeTarget = fadeMax;
+        fadeController.fadeTarget = fadeMax;
         
         // move player
         player.transform.SetPositionAndRotation(playerEndLocation.position, playerEndLocation.rotation);
@@ -97,7 +97,7 @@ public class CutsceneTrigger : MonoBehaviour
         yield return new WaitForSecondsRealtime(cutsceneDelay);
 
         // fade into normal gameplay
-        postMatController.fadeTarget = fadeMin;
+        fadeController.fadeTarget = fadeMin;
 
         // reset Cutscene Elements
         virtualCamera.Priority = 0;
