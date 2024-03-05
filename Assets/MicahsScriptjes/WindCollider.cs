@@ -2,14 +2,14 @@ using PathCreation;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class WindCollider : MonoBehaviour
 {
-    [HideInInspector] public PathCreator pathCreator;
-    public float colliderPoint;
+    [HideInInspector] public SplineContainer splineContainer;
+    [HideInInspector] public float colliderPoint;
     void Start()
     {
-        
     }
     // check if player is inside tunnel
     private void OnTriggerEnter(Collider col)
@@ -19,7 +19,7 @@ public class WindCollider : MonoBehaviour
             if(!tunnelScript.insideTunnel && !tunnelScript.onCooldown)
             {
                 tunnelScript.insideTunnel = true;
-                tunnelScript.currentPath = pathCreator;
+                tunnelScript.currentPath = splineContainer;
                 tunnelScript.SetPath(colliderPoint);
             }
         }
