@@ -40,6 +40,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Forward",
+                    "type": "Button",
+                    "id": "4078b170-cf0c-4a1c-b162-cb1941511dfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "7e8031bf-3be0-48f5-b7a6-edf0c6f55e01",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -156,7 +174,7 @@
                 {
                     "name": "",
                     "id": "d67e46d8-74fa-419a-9032-2fb8cacf084d",
-                    "path": "<Gamepad>/rightStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "ScaleVector2(x=10,y=-10)",
                     "groups": "Gamepad",
@@ -172,6 +190,39 @@
                     "processors": "",
                     "groups": "Keyboard & Mouse",
                     "action": "CameraLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6086f2a2-208c-4aec-9594-05402bb363e3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5513d95-5c47-42bb-9273-d7a5cc6c28d5",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e901a069-1aac-42de-80c7-90f0c0fd7273",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Continue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

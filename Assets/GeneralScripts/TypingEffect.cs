@@ -4,11 +4,11 @@ using System.Collections;
 
 public class TypingEffect : MonoBehaviour
 {
-    private TMP_Text textMeshPro;
+    private TextMeshProUGUI textMeshPro;
 
-    void Start()
+    private void Awake()
     {
-        textMeshPro = GetComponent<TMP_Text>();
+        textMeshPro = GetComponent<TextMeshProUGUI>();
     }
 
     public void SetText(string text, float typingSpeed)
