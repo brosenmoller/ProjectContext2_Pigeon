@@ -1321,6 +1321,7 @@ GameObject:
   - component: {fileID: 1844639857907864878}
   - component: {fileID: 1576043333497391610}
   - component: {fileID: 6851507115409280960}
+  - component: {fileID: 3542009798558176121}
   m_Layer: 0
   m_Name: PigeonBird
   m_TagString: Untagged
@@ -1359,15 +1360,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdMovementMode: 2
   autoMove: 0
-  startSpeed: 15
-  maxSpeed: 60
-  minSpeed: 10
-  speedIncrease: 0.1
+  maxY: 400
+  startSpeed: 50
+  maxSpeed: 100
+  minSpeed: 30
+  speedIncrease: 0.4
   speedDecrease: 0.05
-  stoppingDeceleration: 0
+  stoppingDeceleration: 0.5
   verticalRotationSpeed: 100
   horizontalRotationSpeed: 100
   trackingSpeed: 3
+  maxLook: 0.85
   boostStrength: 2
   boostAcceleration: 1500
   boostDuration: 0.5
@@ -1390,7 +1393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e0ce11da87d3648a0fcd002f8b4cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRespawnHeight: 120
+  minRespawnHeight: 350
   respawnDelay: 0.5
   respawnCheckStepSize: 100
   respawnCheckRadius: 3
@@ -1446,6 +1449,19 @@ MonoBehaviour:
   currentPath: {fileID: 0}
   snapSpeed: 4
   tunnelPoint: 0
+--- !u!114 &3542009798558176121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035363394885339974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0d2c5e350747a4a83dbb9ff72f6dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5487868927902457501}
 --- !u!1 &8054468987722639224
 GameObject:
   m_ObjectHideFlags: 0

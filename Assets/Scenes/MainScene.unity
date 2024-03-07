@@ -1374,11 +1374,6 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1029057426}
-    - target: {fileID: 1844639857907864878, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: minRespawnHeight
-      value: 346.7
-      objectReference: {fileID: 0}
     - target: {fileID: 2746920756542938550, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
       propertyPath: m_IsActive
@@ -1408,26 +1403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: minSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: startSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694745399590752247, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      propertyPath: stoppingDeceleration
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8710700800484872483, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
