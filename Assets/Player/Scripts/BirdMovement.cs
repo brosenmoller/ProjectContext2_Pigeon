@@ -29,6 +29,7 @@ public class BirdMovement : MonoBehaviour
 
     [Header("Tracking")]
     [SerializeField] private float trackingSpeed;
+    [SerializeField] private float maxLook;
 
     [Header("Boost")]
     [SerializeField] private float boostStrength;
@@ -128,7 +129,12 @@ public class BirdMovement : MonoBehaviour
 
     private void TrackingRotation()
     {
-        transform.Rotate(Vector3.right, -1f * look.y * trackingSpeed * Time.deltaTime, Space.Self);
+        float dotProduct = Vector3.Dot(Vector3.up, transform.forward);
+        if ((dotProduct > maxLook && look.y < 0) || (dotProduct < -maxLook && look.y > 0) || (dotProduct < maxLook && dotProduct > -maxLook))
+        {
+            transform.Rotate(Vector3.right, -1f * look.y * trackingSpeed * Time.deltaTime, Space.Self);
+        }
+        
         transform.Rotate(Vector3.up, look.x * trackingSpeed * Time.deltaTime, Space.World);
     }
 
@@ -136,14 +142,17 @@ public class BirdMovement : MonoBehaviour
     {
         if (!autoMove && !isMoving)
         {
-            velocity -= stoppingDeceleration;
+            if (velocity >= 0)
+            {
+                velocity -= stoppingDeceleration;
+            }
         }
         else
         {
             DefaultVelocity();
         }
 
-        transform.position += velocity * Time.deltaTime * transform.forward * CanMove();
+        transform.position += velocity * Time.deltaTime * transform.forward;
     }
 
     private void DefaultVelocity()
@@ -178,6 +187,8 @@ public class BirdMovement : MonoBehaviour
 
     private IEnumerator Boost()
     {
+        if (velocity < minSpeed) { velocity = minSpeed; }
+
         boostVelocityIncrease = velocity * boostStrength;
         
         float originalMaxSpeed = maxSpeed;
