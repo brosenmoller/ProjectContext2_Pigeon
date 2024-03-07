@@ -38,7 +38,7 @@ public class FadeController : MonoBehaviour
             }
         }
     }
-
+    
     private void OnDestroy()
     {
         SetAlpha(0);
