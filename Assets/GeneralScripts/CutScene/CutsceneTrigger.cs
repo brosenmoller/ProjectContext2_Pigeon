@@ -109,7 +109,7 @@ public class CutsceneTrigger : MonoBehaviour
         playerRespawn.enabled = true;
 
         // set new target
-        cutsceneManager.SetCurrentScene();
+        cutsceneManager.CutsceneCompleted();
     }
 
     private IEnumerator StoryRoutine()

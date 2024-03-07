@@ -3,9 +3,9 @@ using UnityEngine;
 public class CutsceneManager : MonoBehaviour
 {
     [Header("Cutscenes played to element order")]
-    [SerializeField] private CutsceneTrigger[] cutsceneTriggers;
+    [SerializeField] private Cutscene[] cutscenes;
 
-    private int currentScene = -1;
+    private int currentSceneIndex = -1;
     public Story currentStory;
 
     private CompassController compassController;
@@ -14,32 +14,53 @@ public class CutsceneManager : MonoBehaviour
     {
         compassController = FindObjectOfType<CompassController>();
 
-        // set first scene
-        SetCurrentScene();
+        // Set first scene
+        SetNextScene();
     }
 
-    public void SetCurrentScene()
+    public void CutsceneCompleted()
     {
-        // check if there are cutscenes left
-        if (currentScene >= cutsceneTriggers.Length) 
+        cutscenes[currentSceneIndex].trigger.IsTarget = false;
+        cutscenes[currentSceneIndex].journalist.Activate();
+        compassController.objectiveObjectTransform = cutscenes[currentSceneIndex].journalist.transform;
+    }
+
+    public void JournalistCompleted()
+    {
+        // TODO: Newspaper Animation
+
+        SetNextScene();
+    }
+
+    public void SetNextScene()
+    {
+        // Check if there are cutscenes left
+        if (currentSceneIndex >= cutscenes.Length) 
         {
             return;
         }
 
-        // set scene according to array order
-        currentScene++;
-        GameManager.Instance.InvokeCityLevelChange(currentScene);
-        for (int i = 0; i < cutsceneTriggers.Length; i++)
+        // Set scene according to array order
+        currentSceneIndex++;
+        GameManager.Instance.InvokeCityLevelChange(currentSceneIndex);
+        for (int i = 0; i < cutscenes.Length; i++)
         {
-            if (currentScene == i)
+            if (currentSceneIndex == i)
             {
-                compassController.objectiveObjectTransform = cutsceneTriggers[i].transform;
-                cutsceneTriggers[i].IsTarget = true;
+                compassController.objectiveObjectTransform = cutscenes[i].trigger.transform;
+                cutscenes[i].trigger.IsTarget = true;
             }
             else
             {
-                cutsceneTriggers[i].IsTarget = false;
+                cutscenes[i].trigger.IsTarget = false;
             }
         }
+    }
+
+    [System.Serializable]
+    public class Cutscene
+    {
+        public CutsceneTrigger trigger;
+        public JournalistController journalist;
     }
 }
