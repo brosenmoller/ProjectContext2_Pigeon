@@ -2,21 +2,23 @@ using PathCreation;
 using PathCreation.Examples;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class TunnelScript : MonoBehaviour
 {
     [HideInInspector] public bool insideTunnel;
     [HideInInspector] public bool onCooldown;
     [SerializeField] private GameObject pathFollower;
-    [HideInInspector] public PathCreator currentPath;
+    [HideInInspector] public SplineContainer currentPath;
     private BirdMovement birdMovement;
     private GameObject currentFollower;
-    private PathFollower _pathFollower;
+    private SplineAnimate splineAnimate;
     [SerializeField] private float snapSpeed;
-    private Vector3 storedFollowerPos;
-    private const float CDamount = 0.5f;
+    private const float CDamount = 2f;
     private float zAngle;
+    [HideInInspector] public float tunnelPoint;
     void Start()
     {
         birdMovement = GetComponent<BirdMovement>();
@@ -35,10 +37,9 @@ public class TunnelScript : MonoBehaviour
     {
         // create path follower at the location that the player has entered the tunnel
         birdMovement.enabled = false;
+        tunnelPoint = colliderPoint;
         currentFollower = Instantiate(pathFollower);
-        _pathFollower = currentFollower.GetComponent<PathFollower>();
-        _pathFollower.pathCreator = currentPath;
-        _pathFollower.playerOffset = colliderPoint;
+        splineAnimate = currentFollower.GetComponent<SplineAnimate>();
         zAngle = transform.localEulerAngles.z;
     }
     private void MoveAlongTunnel()
@@ -48,13 +49,13 @@ public class TunnelScript : MonoBehaviour
         transform.position = Vector3.Slerp(transform.position, currentFollower.transform.position, speed);
         transform.rotation = Quaternion.Slerp(transform.rotation, currentFollower.transform.rotation, speed);
 
-        // if path follower has stopped moving, exit tunnel
-        if (storedFollowerPos == _pathFollower.pathFollowerPos && insideTunnel)
+        // if follower has neared end of path, exit player from the tunnel
+        if(splineAnimate.NormalizedTime + tunnelPoint > 0.99 && insideTunnel)
         {
             StartCoroutine(ExitTunnel());
             insideTunnel = false;
+            Destroy(currentFollower);
         }
-        storedFollowerPos = _pathFollower.pathFollowerPos;
     }
 
     private IEnumerator ExitTunnel()
