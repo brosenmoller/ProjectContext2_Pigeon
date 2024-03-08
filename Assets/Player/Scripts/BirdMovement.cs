@@ -15,6 +15,9 @@ public class BirdMovement : MonoBehaviour
     [SerializeField] private BirdMovementMode birdMovementMode;
     [SerializeField] private bool autoMove;
 
+    [Header("General")]
+    [SerializeField] private float maxY;
+
     [Header("Speed Control")]
     [SerializeField] private float startSpeed;
     [SerializeField] private float maxSpeed;
@@ -29,6 +32,7 @@ public class BirdMovement : MonoBehaviour
 
     [Header("Tracking")]
     [SerializeField] private float trackingSpeed;
+    [SerializeField] private float maxLook;
 
     [Header("Boost")]
     [SerializeField] private float boostStrength;
@@ -43,7 +47,7 @@ public class BirdMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Transform body;
-    [SerializeField] private Transform head;
+    public Transform head;
 
     private float horizontal;
     private float vertical;
@@ -57,7 +61,7 @@ public class BirdMovement : MonoBehaviour
     private float boostVelocityIncrease;
 
     private bool isMoving = false;
-
+    private bool CanMove => autoMove || isMoving;
 
     private void Awake()
     {
@@ -105,7 +109,8 @@ public class BirdMovement : MonoBehaviour
     private void BasicMovement()
     {
         // Movement
-        transform.position += startSpeed * Time.deltaTime * transform.forward * CanMove();
+        int multiplier = CanMove ? 1 : 0;
+        transform.position += multiplier * startSpeed * Time.deltaTime * transform.forward;
         transform.Rotate(horizontal * horizontalRotationSpeed * Time.deltaTime * Vector3.up);
         transform.position += -1f * vertical * (horizontalRotationSpeed / 2) * Time.deltaTime * Vector3.up;
 
@@ -128,22 +133,30 @@ public class BirdMovement : MonoBehaviour
 
     private void TrackingRotation()
     {
-        transform.Rotate(Vector3.right, -1f * look.y * trackingSpeed * Time.deltaTime, Space.Self);
+        float dotProduct = Vector3.Dot(Vector3.up, transform.forward);
+        if ((dotProduct > maxLook && look.y < 0) || (dotProduct < -maxLook && look.y > 0) || (dotProduct < maxLook && dotProduct > -maxLook))
+        {
+            transform.Rotate(Vector3.right, -1f * look.y * trackingSpeed * Time.deltaTime, Space.Self);
+        }
+        
         transform.Rotate(Vector3.up, look.x * trackingSpeed * Time.deltaTime, Space.World);
     }
 
     private void CalculateVelocity()
     {
-        if (!autoMove && !isMoving)
+        if (!CanMove || (transform.position.y > maxY && Vector3.Dot(Vector3.up, transform.forward) > 0))
         {
-            velocity -= stoppingDeceleration;
+            if (velocity >= 0)
+            {
+                velocity -= stoppingDeceleration;
+            }
         }
         else
         {
             DefaultVelocity();
         }
 
-        transform.position += velocity * Time.deltaTime * transform.forward * CanMove();
+        transform.position += velocity * Time.deltaTime * transform.forward;
     }
 
     private void DefaultVelocity()
@@ -170,14 +183,10 @@ public class BirdMovement : MonoBehaviour
         }
     }
 
-    private int CanMove()
-    {
-        if (autoMove || isMoving) { return 1; }
-        else { return 0; }
-    }
-
     private IEnumerator Boost()
     {
+        if (velocity < minSpeed) { velocity = minSpeed; }
+
         boostVelocityIncrease = velocity * boostStrength;
         
         float originalMaxSpeed = maxSpeed;
@@ -210,5 +219,11 @@ public class BirdMovement : MonoBehaviour
     public void ResetVelocity()
     {
         velocity = 0f;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(new Vector3(transform.position.x, maxY, transform.position.z), 10f);
     }
 }
