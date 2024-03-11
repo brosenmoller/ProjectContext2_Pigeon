@@ -20,5 +20,8 @@ public class TestAnimation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) {
             animator.SetTrigger("Flying");
         }
+        if (Input.GetKeyDown(KeyCode.J)) {
+            animator.SetTrigger("Dive");
+        }
     }
 }
