@@ -10,16 +10,16 @@ public class FadeController : MonoBehaviour
     [SerializeField] private bool debugMode;
 
     [HideInInspector] public float fadeTarget;
-
     private float fadeIntensity;
 
-    void Start()
+    private void Start()
     {
         fadeIntensity = 0;
         fadeTarget = -0.5f;
         SetAlpha(fadeIntensity);
     }
-    void Update()
+
+    private void Update()
     {
         // lerp fade intensity to desired target (-0.5 for no fade, 1.5 for fade)
         fadeIntensity = Mathf.Clamp(Mathf.Lerp(fadeIntensity, fadeTarget, fadeSpeed * Time.unscaledDeltaTime), 0, 1);
@@ -38,6 +38,7 @@ public class FadeController : MonoBehaviour
             }
         }
     }
+    
     private void OnDestroy()
     {
         SetAlpha(0);
