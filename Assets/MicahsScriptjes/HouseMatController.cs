@@ -26,6 +26,7 @@ public class HouseColorController : MonoBehaviour
     [SerializeField] private Color[] colors4B;
     [SerializeField] private Color[] colors4C;
     private string[] varNames = new string[] { "_Col1", "_Col2", "_Col3", "_Col4", "_Col5", "_Col6" };
+    [SerializeField] private bool debug;
 
     private void Start()
     {
@@ -34,17 +35,20 @@ public class HouseColorController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (debug)
         {
-            ChangeColors(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ChangeColors(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            ChangeColors(2);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                ChangeColors(0);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                ChangeColors(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                ChangeColors(2);
+            }
         }
     }
     public void ChangeColors(int phaseIndex)
