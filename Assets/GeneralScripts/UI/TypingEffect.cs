@@ -24,6 +24,11 @@ public class TypingEffect : MonoBehaviour
         textMeshPro.text = "";
     }
 
+    public void StopTypingEffect()
+    {
+        StopAllCoroutines();
+    }
+
     private IEnumerator TypeText(string text, float speedPerCharacter)
     {
         foreach (char c in text)

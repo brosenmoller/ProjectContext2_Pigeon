@@ -30,7 +30,7 @@ public class HouseColorController : MonoBehaviour
 
     private void Start()
     {
-        //GameManager.Instance.OnCityLevelChange += ChangeColors;
+        GameManager.Instance.OnCityLevelChange += ChangeColors;
         ChangeColors(0);
     }
     private void Update()

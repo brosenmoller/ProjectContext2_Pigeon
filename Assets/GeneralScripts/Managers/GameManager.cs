@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
 
     public event Action<int> OnCityLevelChange;
-    public void InvokeCityLevelChange(int level) => OnCityLevelChange?.Invoke(level);
+    public void InvokeCityLevelChange(int level) { OnCityLevelChange?.Invoke(level); Debug.Log("Invoke"); }
 
 
     private void Awake()
