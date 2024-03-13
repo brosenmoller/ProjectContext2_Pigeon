@@ -137,7 +137,6 @@ public class CutsceneTrigger : MonoBehaviour
             }
 
             cutSceneView.SetText(storyLine.subtitle, waitTime);
-            //yield return new WaitForSeconds(waitTime + subtitleDelay);
             
             float timer = 0;
             bool textCompleted = false;
