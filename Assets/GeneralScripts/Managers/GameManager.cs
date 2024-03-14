@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
     public static TimerManager TimerManager { get; private set; }
     public static InputManager InputManager { get; private set; }
     public static UIViewManager UIViewManager { get; private set; }
+    public static AudioManager AudioManager { get; private set; }
+
 
     private Manager[] activeManagers;
 
 
     public event Action<int> OnCityLevelChange;
-    public void InvokeCityLevelChange(int level) { OnCityLevelChange?.Invoke(level); Debug.Log("Invoke"); }
+    public void InvokeCityLevelChange(int level) { OnCityLevelChange?.Invoke(level); }
 
 
     private void Awake()
@@ -40,11 +42,13 @@ public class GameManager : MonoBehaviour
         TimerManager = new TimerManager();
         InputManager = new InputManager();
         UIViewManager = new UIViewManager();
+        AudioManager = new AudioManager();
 
         activeManagers = new Manager[] {
             TimerManager,
             InputManager,
             UIViewManager,
+            AudioManager,
         };
 
         foreach (Manager manager in activeManagers)

@@ -10,7 +10,7 @@ public class AudioTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             
-           AudioManager.instance.StartMusic();
+           AudioController.instance.StartMusic();
         }
     }
 
@@ -19,7 +19,7 @@ public class AudioTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             
-           AudioManager.instance.StopMusic();
+           AudioController.instance.StopMusic();
         }
     }
 }

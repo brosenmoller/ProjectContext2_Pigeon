@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioController : MonoBehaviour
 {
-public float maxVolume = 1f;
+    public float maxVolume = 1f;
     public float minVolume = 0f;
     private AudioSource source;
     public AudioClip clip;
@@ -15,22 +14,30 @@ public float maxVolume = 1f;
     private IEnumerator fadeIn;
     private IEnumerator fadeOut;
 
-    public static AudioManager instance;
+    public static AudioController instance;
 
     private void Awake()
     {
         if (!instance)
+        {
             instance = this;
-            source = GetComponent<AudioSource>();
+        }
+
+        source = GetComponent<AudioSource>();
     }
 
     public void StartMusic()
     {
-        if(fadeOut!=null)
-        StopCoroutine(fadeOut);
+        if (fadeOut != null)
+        {
+            StopCoroutine(fadeOut);
+        }
+
         source.clip = clip;
         source.Play();
+        
         fadeIn = FadeIn(source, fadeInDuration, maxVolume);
+        
         StartCoroutine(fadeIn);
     }
 
@@ -46,7 +53,7 @@ public float maxVolume = 1f;
 
    
 
-    IEnumerator FadeIn(AudioSource aSource, float duration, float targetVolume)
+    private IEnumerator FadeIn(AudioSource aSource, float duration, float targetVolume)
     {
         float timer = 0f;
         float currentVolume = aSource.volume;
@@ -55,13 +62,13 @@ public float maxVolume = 1f;
         while (timer < duration)
         {
             timer += Time.deltaTime;
-            var newVolume = Mathf.Lerp(currentVolume, targetValue, timer/duration);
+            float newVolume = Mathf.Lerp(currentVolume, targetValue, timer/duration);
             aSource. volume = newVolume;
             yield return null;
         }
     }
 
-    IEnumerator FadeOut(AudioSource aSource, float duration, float targetVolume)
+    private IEnumerator FadeOut(AudioSource aSource, float duration, float targetVolume)
     {
         float timer = 0f;
         float currentVolume = aSource.volume;
@@ -70,8 +77,8 @@ public float maxVolume = 1f;
         while (aSource.volume > 0)
         {
             timer += Time.deltaTime;
-            var newVolume = Mathf.Lerp(currentVolume, targetValue, timer/duration);
-            aSource. volume = newVolume;
+            float newVolume = Mathf.Lerp(currentVolume, targetValue, timer/duration);
+            aSource.volume = newVolume;
             yield return null;
         }
     }
