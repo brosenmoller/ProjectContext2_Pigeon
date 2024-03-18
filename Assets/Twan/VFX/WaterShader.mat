@@ -42,6 +42,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _cellDensity: 5
     m_Colors:
     - _foamColor: {r: 0.048939347, g: 0.05660379, b: 0.04031685, a: 0}

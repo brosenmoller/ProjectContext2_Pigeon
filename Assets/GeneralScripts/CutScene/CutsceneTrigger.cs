@@ -124,16 +124,47 @@ public class CutsceneTrigger : MonoBehaviour
                 cutSceneView.SetSprite(storyLine.characterSprite);
             }
 
+            float waitTime;
+
             if (storyLine.audioClip != null)
             {
-                cutSceneView.SetText(storyLine.subtitle, storyLine.audioClip.length);
+                waitTime = storyLine.audioClip.length;
                 narrationSource.PlayOneShot(storyLine.audioClip);
-                yield return new WaitForSeconds(storyLine.audioClip.length + subtitleDelay);
             }
             else
             {
-                cutSceneView.SetText(storyLine.subtitle, 3.0f);
-                yield return new WaitForSeconds(3.0f + subtitleDelay);
+                waitTime = 3.0f;
+            }
+
+            cutSceneView.SetText(storyLine.subtitle, waitTime);
+            
+            float timer = 0;
+            bool textCompleted = false;
+            bool continueToNext = false;
+            while (timer < waitTime + subtitleDelay)
+            {
+                timer += Time.deltaTime;
+
+                if (GameManager.InputManager.controls.GamePlay.Continue.WasPressedThisFrame())
+                {
+                    if (textCompleted)
+                    {
+                        continueToNext = true;
+                        break;
+                    }
+                    else
+                    {
+                        cutSceneView.SetTextDirect(storyLine.subtitle);
+                        textCompleted = true;
+                    }
+                }
+
+                yield return null;
+            }
+
+            if (continueToNext)
+            {
+                continue;
             }
 
             while (requireKeyPressForNextLine && !GameManager.InputManager.controls.GamePlay.Continue.WasPressedThisFrame())

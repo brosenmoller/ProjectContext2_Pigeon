@@ -15,6 +15,13 @@ public class CutSceneView : UIView
         typingEffect = dialogueText.GetComponent<TypingEffect>();
     }
 
+    public void SetTextDirect(string text)
+    {
+        typingEffect.StopTypingEffect();
+        Debug.Log("SetTextDirect");
+        dialogueText.text = text;
+    }
+
     public void SetText(string text, float typingSpeed) => typingEffect.SetText(text, typingSpeed);
     public void ResetText() => typingEffect.ResetText();
 

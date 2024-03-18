@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
+  m_Name: Story1
+  m_EditorClassIdentifier: 
+  title: Story 1
+  stories:
+  - subtitle: "How\u2019s it going Pigeon?"
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: 01ff40696baee1545be48c5e31a52ede, type: 3}
+  - subtitle: 'I have already been in the Netherlands for 19 years, since I was a
+      14-year-old boy.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: "Sadly, I still do not have residence papers. That\u2019s why, sometimes,
+      my life feels like it is standing still. Like I am forever sitting in the waiting
+      room.  "
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'It is nicer in Utrecht than in other cities though! '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'Here, people leave refugees alone more and I found a community of
+      people who are going through the same things as me.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'Another thing I appreciate about living here is the healthcare. I
+      have epilepsy and here, I got the right medication.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'Back home, that would have never been possible.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'I would love to tell all people out there to remember treating each
+      other with love and peace and remember that we are all human beings! '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
