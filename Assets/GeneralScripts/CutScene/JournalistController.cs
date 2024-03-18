@@ -3,14 +3,22 @@ using System.Collections;
 
 public class JournalistController : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float turnAroundDelay = 0.5f;
     [SerializeField] private Vector3 endPosition;
-    
-    private MeshRenderer meshRenderer;
+
+    [Header("Newspaper Settings")]
+    [SerializeField] private Sprite newsPaperSprite;
+    [SerializeField] private float newsPaperDuration;
+
+    [Header("References")]
+    [SerializeField] private GameObject visuals;
+
     private Collider triggerCollider;
     private Vector3 startPosition;
     private CutsceneManager cutsceneManager;
+    private BirdMovement player;
 
     private bool isActive;
 
@@ -19,18 +27,17 @@ public class JournalistController : MonoBehaviour
         startPosition = transform.position;
 
         cutsceneManager = FindObjectOfType<CutsceneManager>();
-
-        meshRenderer = GetComponent<MeshRenderer>();
         triggerCollider = GetComponent<Collider>();
+        player = FindObjectOfType<BirdMovement>();
 
-        meshRenderer.enabled = false;
+        visuals.SetActive(false);
         triggerCollider.enabled = false;
     }
 
     public void Activate()
     {
         isActive = true;
-        meshRenderer.enabled = true;
+        visuals.SetActive(true);
         triggerCollider.enabled = true;
         StartCoroutine(JournalistWalking());
     }
@@ -41,9 +48,20 @@ public class JournalistController : MonoBehaviour
         {
             StopAllCoroutines();
             triggerCollider.enabled = false;
-            meshRenderer.enabled = false;
-            cutsceneManager.JournalistCompleted();
+            visuals.SetActive(false);
+
+            player.enabled = false;
+            GameManager.UIViewManager.Show(typeof(NewsPaperView));
+            NewsPaperView newspaperView = (NewsPaperView)GameManager.UIViewManager.GetView(typeof(NewsPaperView));
+            newspaperView.SetNewsPaper(newsPaperSprite, newsPaperDuration, OnComplete);
         }
+    }
+
+    private void OnComplete()
+    {
+        player.enabled = true;
+        GameManager.UIViewManager.Show(typeof(GameView));
+        cutsceneManager.JournalistCompleted();
     }
 
     private IEnumerator MoveTowards(Vector3 targetPosition)
