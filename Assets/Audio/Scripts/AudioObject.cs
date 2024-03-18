@@ -36,7 +36,7 @@ public class AudioObject : ScriptableObject
         {
             audioClipIndex = UnityEngine.Random.Range(0, clips.Length);
         }
-        else
+        else if (clips.Length > 1)
         {
             audioClipIndex++;
             if (audioClipIndex >= clips.Length)
@@ -46,6 +46,7 @@ public class AudioObject : ScriptableObject
         }
 
         Source.clip = clips[audioClipIndex];
+        Source.Play();
     }
 
     public void Stop() => Source.Stop();

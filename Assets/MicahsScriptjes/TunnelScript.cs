@@ -1,8 +1,4 @@
-using PathCreation;
-using PathCreation.Examples;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -19,6 +15,7 @@ public class TunnelScript : MonoBehaviour
     private const float CDamount = 2f;
     private float zAngle;
     [HideInInspector] public float tunnelPoint;
+
     void Start()
     {
         birdMovement = GetComponent<BirdMovement>();

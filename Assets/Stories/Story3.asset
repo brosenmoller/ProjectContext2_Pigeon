@@ -12,31 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
   m_Name: Story3
   m_EditorClassIdentifier: 
-  title: Prototype Story 3
+  title: Story 3
   stories:
-  - subtitle: 'Good to see you Pigeon, '
+  - subtitle: Good afternoon Pigeon
     audioClip: {fileID: 0}
-    characterSprite: {fileID: 21300000, guid: 723202529eb3c1447916eec7d5cef862, type: 3}
-  - subtitle: As a human activist my life quickly got in danger.
-    audioClip: {fileID: 0}
-    characterSprite: {fileID: 0}
-  - subtitle: The organization I was working with invited me over to the Netherlands.
+    characterSprite: {fileID: 21300000, guid: cfa51ebc0d2c0af4798206a5eb08fe83, type: 3}
+  - subtitle: 'When my home country started a war, I was already living in Utrecht.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: After spending 3 months in a refugee camp I was able to stay in Utrecht.
+  - subtitle: 'Luckily, here in the Netherlands there is freedom of speech, so I
+      could post criticism of the government in my home country.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: My English has gotten better hasn't it?
+  - subtitle: 'While I am happy that I got to express my opinion, this also means
+      that I cannot go back. That is tough because it still is my home.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: When I came here I made a friend that would help me become comfortable
-      with the education system.
+  - subtitle: 'Especially because I was supposed to get married there this year. 
+      I hope we can find a solution and my girlfriend can move here.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: And in return a friendship was bonded and my English improved as well.
+  - subtitle: 'Luckily, my flatmates and classmates here are very supportive.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: 'In Utrecht there''s still lot of negative impressions of people like
-      me. I wish people would be more open minded like my friend.  '
+  - subtitle: 'If I could wish for something, it would be more empathy towards all
+      people who suffer from war. '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}

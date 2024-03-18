@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cddb8845c6a26fb4eb27b03279a75205, type: 3}
-  m_Name: Flap
+  m_Name: Death
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 8e78ca17588c01a4f913bf0ff8ee1a45, type: 3}
-  - {fileID: 8300000, guid: 1be81292a68a48f40bdedc723d425c7e, type: 3}
-  - {fileID: 8300000, guid: 7c30b270098a65041a5669baa3f8bcfc, type: 3}
+  - {fileID: 8300000, guid: 5c80be70185276945a98c937fd11327d, type: 3}
+  - {fileID: 8300000, guid: 6a61f91b31c233440a4678ee06e432f0, type: 3}
   randomiseClip: 1
   audioMixerGroup: {fileID: 8346736094946920384, guid: 8100d65377050c64e86e8f646631ed77,
     type: 2}
   loop: 0
   PlayOnAwake: 0
-  volume: 0.5
+  volume: 1
   pitch: 1

@@ -1707,6 +1707,18 @@ PrefabInstance:
       objectReference: {fileID: 1029057426}
     - target: {fileID: 1844639857907864878, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d74185aa3ff0b3428ff7cc234d84a8e,
+        type: 2}
+    - target: {fileID: 1844639857907864878, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
+      propertyPath: respawnSound
+      value: 
+      objectReference: {fileID: 11400000, guid: a3dbf36b63900874f8eb1722e8ccb348,
+        type: 2}
+    - target: {fileID: 1844639857907864878, guid: fc7852b8426d20e4e9412e0a7f5890e5,
+        type: 3}
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1029057426}
@@ -1885,10 +1897,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8035363394885339974, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-        type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 926736755}
     - targetCorrespondingSourceObject: {fileID: 2351263124431311452, guid: fc7852b8426d20e4e9412e0a7f5890e5,
         type: 3}
       insertIndex: -1
@@ -1906,20 +1914,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 926736751}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &926736754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8035363394885339974, guid: fc7852b8426d20e4e9412e0a7f5890e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 926736751}
-  m_PrefabAsset: {fileID: 0}
---- !u!81 &926736755
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926736754}
-  m_Enabled: 1
 --- !u!1001 &986782254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3854,8 +3848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293.21045, y: 27.328003}
-  m_SizeDelta: {x: 529.407, y: 735.2402}
+  m_AnchoredPosition: {x: 282, y: -27}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867086184
 MonoBehaviour:
@@ -3877,7 +3871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1556748886, guid: cca88225a25569e408431876416d850d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01ff40696baee1545be48c5e31a52ede, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

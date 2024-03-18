@@ -21,6 +21,8 @@ public class PlayerRespawn : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private GameObject deathParticles;
     [SerializeField] private Transform body;
+    [SerializeField] private AudioObject deathSound;
+    [SerializeField] private AudioObject respawnSound;
 
     private Collider[] colliderAllocation;
     private BirdMovement birdMovement;
@@ -45,6 +47,8 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (isDying) { return; }
 
+        deathSound.Play();
+
         isDying = true;
         body.gameObject.SetActive(false);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
@@ -55,6 +59,8 @@ public class PlayerRespawn : MonoBehaviour
 
     private void Respawn()
     {
+        respawnSound.Play();
+
         Vector3 oldPosition = transform.position;
         float respawnHeight = Mathf.Clamp(transform.position.y, minRespawnHeight, float.MaxValue);
         Vector3 newPosition = new(transform.position.x, respawnHeight, transform.position.z);

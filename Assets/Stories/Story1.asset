@@ -12,29 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
   m_Name: Story1
   m_EditorClassIdentifier: 
-  title: Prototype Story 1
+  title: Story 1
   stories:
-  - subtitle: Me and my little girls have been here for 3 years already
+  - subtitle: "How\u2019s it going Pigeon?"
     audioClip: {fileID: 0}
-    characterSprite: {fileID: 21300000, guid: 2156ad697a23303408ef36fe4ef563ef, type: 3}
-  - subtitle: I love living here in Utrecht because, in the Netherlands, there is
-      so much freedom for me as a woman.
-    audioClip: {fileID: 0}
-    characterSprite: {fileID: 0}
-  - subtitle: "That\u2019s what I want for my daughters as well."
+    characterSprite: {fileID: 21300000, guid: 01ff40696baee1545be48c5e31a52ede, type: 3}
+  - subtitle: 'I have already been in the Netherlands for 19 years, since I was a
+      14-year-old boy.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: 'Sadly, it can be very difficult here for a single mother without papers
-      to get permanent residence and schooling for my kids. '
+  - subtitle: "Sadly, I still do not have residence papers. That\u2019s why, sometimes,
+      my life feels like it is standing still. Like I am forever sitting in the waiting
+      room.  "
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: ' In the time we have been here, my kids had to change schools 4 times
-      already.'
+  - subtitle: 'It is nicer in Utrecht than in other cities though! '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: This makes it difficult for them to settle here.
+  - subtitle: 'Here, people leave refugees alone more and I found a community of
+      people who are going through the same things as me.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: I wish there was more support for single mothers without papers.
+  - subtitle: 'Another thing I appreciate about living here is the healthcare. I
+      have epilepsy and here, I got the right medication.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'Back home, that would have never been possible.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'I would love to tell all people out there to remember treating each
+      other with love and peace and remember that we are all human beings! '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
