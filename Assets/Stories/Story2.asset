@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea7597b8b70eec44831d7cb22a0088b, type: 3}
+  m_Name: Story2
+  m_EditorClassIdentifier: 
+  title: Story 2
+  stories:
+  - subtitle: Little pigeon I have great news!
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 21300000, guid: 2156ad697a23303408ef36fe4ef563ef, type: 3}
+  - subtitle: 'After four long years I finally got my residence papers to officially
+      live here in Utrecht. Together with my son we''ll be moving into an apartment
+      soon. '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'Four years ago I arrived here in the Netherlands as a victim of human
+      trafficking. I was forced into prostitution and during this time I got pregnant. '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'When we applied, the Immigration Service did not take being gay as
+      a valid reason to stay in the country and refused to give me a residence permit. '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'They sent me to a deportation center, but I went into appeal.  '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'STILL, an organization that aids people without documents, supported
+      my decision and helped me reach Huize Agnes in Utrecht, a safe space for women
+      without residence papers. '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
+  - subtitle: 'While I am grateful to be here now, I wish people understood that
+      every refugee is also dealing with their own conflicts. '
+    audioClip: {fileID: 0}
+    characterSprite: {fileID: 0}
