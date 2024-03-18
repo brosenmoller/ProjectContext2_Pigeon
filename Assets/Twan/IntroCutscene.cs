@@ -20,6 +20,7 @@ public class IntroCutscene : MonoBehaviour
         //start true to allow player to take in panels
         isTiming = true;
         internalTimer = pressTimer;
+
     }
 
     void Update(){
