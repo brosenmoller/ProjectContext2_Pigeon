@@ -53,19 +53,21 @@ public class BirdMovement : MonoBehaviour
     private float vertical;
 
     [Header("Debug")]
-    [SerializeField] private float velocity;
+    public float velocity;
 
     private Vector2 look;
 
     private bool inBoost;
     private float boostVelocityIncrease;
+    private float originalMaxSpeed;
 
-    private bool isMoving = false;
+    private bool isMoving = true;
     private bool CanMove => autoMove || isMoving;
 
     private void Awake()
     {
         velocity = startSpeed;
+        originalMaxSpeed = maxSpeed;
     }
 
     private void Start()
@@ -81,8 +83,8 @@ public class BirdMovement : MonoBehaviour
         GameManager.InputManager.controls.GamePlay.CameraLook.performed += ctx => look = ctx.ReadValue<Vector2>();
         GameManager.InputManager.controls.GamePlay.CameraLook.canceled += _ => look = Vector2.zero;
 
-        GameManager.InputManager.controls.GamePlay.Forward.performed += _ => isMoving = true;
-        GameManager.InputManager.controls.GamePlay.Forward.canceled += _ => isMoving = false;
+        GameManager.InputManager.controls.GamePlay.Forward.performed += _ => isMoving = false;
+        GameManager.InputManager.controls.GamePlay.Forward.canceled += _ => isMoving = true;
 
         GameManager.InputManager.controls.GamePlay.Boost.performed += _ => StartBoost();
     
@@ -146,7 +148,7 @@ public class BirdMovement : MonoBehaviour
     {
         if (!CanMove || (transform.position.y > maxY && Vector3.Dot(Vector3.up, transform.forward) > 0))
         {
-            if (velocity >= 0)
+            if (velocity > 0)
             {
                 velocity -= stoppingDeceleration;
             }
@@ -188,8 +190,6 @@ public class BirdMovement : MonoBehaviour
         if (velocity < minSpeed) { velocity = minSpeed; }
 
         boostVelocityIncrease = velocity * boostStrength;
-        
-        float originalMaxSpeed = maxSpeed;
 
         float velocityIncrease = 0;
         while (velocityIncrease < boostVelocityIncrease)
@@ -210,10 +210,11 @@ public class BirdMovement : MonoBehaviour
             yield return null;
         }
 
+        maxSpeed = originalMaxSpeed;
+
         yield return new WaitForSeconds(boostCooldown);
 
         inBoost = false;
-     
     }
 
     public void ResetVelocity()
