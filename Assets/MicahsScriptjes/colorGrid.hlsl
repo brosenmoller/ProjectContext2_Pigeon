@@ -1,6 +1,5 @@
 #ifndef MYHLSLINCLUDE_INCLUDED
 #define MYHLSLINCLUDE_INCLUDED
-#define PI 3.141592f
 
 void divideGrid_float(float2 UV, float4 col1, float4 col2, float4 col3, float4 col4, float4 col5, float4 col6, out float4 Out) {
     if (UV.x < 0.5f)
