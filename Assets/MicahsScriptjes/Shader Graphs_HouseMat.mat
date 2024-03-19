@@ -39,6 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Metallic: 0
+    - _NoiseScale: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.267
@@ -49,6 +50,7 @@ Material:
     - _Col4: {r: 1, g: 0.99431825, b: 0, a: 0}
     - _Col5: {r: 0.38244393, g: 0, b: 0.6320754, a: 0}
     - _Col6: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseTiling: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8950481899186055761
 MonoBehaviour:
