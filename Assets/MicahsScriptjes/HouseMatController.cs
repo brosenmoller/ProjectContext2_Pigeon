@@ -30,7 +30,7 @@ public class HouseColorController : MonoBehaviour
 
     private void Start()
     {
-        //GameManager.Instance.OnCityLevelChange += ChangeColors;
+        GameManager.Instance.OnCityLevelChange += ChangeColors;
         ChangeColors(0);
     }
     private void Update()
@@ -53,6 +53,11 @@ public class HouseColorController : MonoBehaviour
     }
     public void ChangeColors(int phaseIndex)
     {
+        if (phaseIndex > 2)
+        {
+            return;
+        }
+
         Color[] currentColors1 = new Color[6];
         Color[] currentColors2 = new Color[6];
         Color[] currentColors3 = new Color[6];

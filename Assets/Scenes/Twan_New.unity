@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1824899, g: 0.22526442, b: 0.2901866, a: 1}
+  m_IndirectSpecularColor: {r: 0.18249024, g: 0.22526509, b: 0.29018772, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -1.8852712e-10, y: 0.9954401, z: -0.09538879, w: -0.000000001967396}
+  m_LocalRotation: {x: -1.8852685e-10, y: 0.9954401, z: -0.09538879, w: -0.0000000019673942}
   m_LocalPosition: {x: 547, y: 91.8, z: -95.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1028,7 +1028,7 @@ PrefabInstance:
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
@@ -1057,6 +1057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[7].m_Name
+      value: ContrainedMeshSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[1].m_Name
       value: constraintMesh
       objectReference: {fileID: 0}
@@ -1064,6 +1069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.x
       value: 2381
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.y
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
@@ -1097,6 +1107,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[7].m_Value.x
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[7].m_Value.y
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[7].m_Value.z
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
       objectReference: {fileID: 2800000, guid: 6dd5e3ec5a30dd44da65aed9bbc5d29a, type: 3}
@@ -1104,7 +1129,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[1].m_Value
       value: 
-      objectReference: {fileID: -7344014223792188497, guid: 2fa3545286004f140a34aa756b4bc3cc,
+      objectReference: {fileID: -470067213634067786, guid: 43babec655e248240bb80fa71d4352cb,
         type: 3}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
@@ -1119,6 +1144,11 @@ PrefabInstance:
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[6].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[7].m_Overridden
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 676100788785979916, guid: 0af8746370b1da24c99c51893d59a89d,
@@ -1144,7 +1174,7 @@ PrefabInstance:
     - target: {fileID: 4011909309788950304, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 371
       objectReference: {fileID: 0}
     - target: {fileID: 4011909309788950304, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
@@ -1154,7 +1184,7 @@ PrefabInstance:
     - target: {fileID: 4011909309788950304, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 4011909309788950304, guid: 0af8746370b1da24c99c51893d59a89d,
         type: 3}
@@ -1324,7 +1354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884304573}
   serializedVersion: 2
-  m_LocalRotation: {x: -1.8852712e-10, y: 0.9954401, z: -0.09538879, w: -0.000000001967396}
+  m_LocalRotation: {x: -1.8852685e-10, y: 0.9954401, z: -0.09538879, w: -0.0000000019673942}
   m_LocalPosition: {x: 547, y: 91.8, z: -95.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1965,11 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e53b9a3c79f484b8b3b1e01eadeccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutsceneTriggers:
-  - {fileID: 460658262}
-  - {fileID: 460658262}
-  - {fileID: 460658262}
-  - {fileID: 460658262}
+  cutscenes: []
   currentStory: {fileID: 0}
 --- !u!4 &1476034260
 Transform:
@@ -2594,7 +2620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699953008}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268343, y: -0.000000022481217, z: 0.000000009312025, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268343, y: 0.00000002248122, z: -0.000000009312027, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

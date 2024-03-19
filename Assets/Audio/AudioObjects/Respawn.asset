@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cddb8845c6a26fb4eb27b03279a75205, type: 3}
+  m_Name: Respawn
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 6b420ee903cb1934ab6c7f2697139e06, type: 3}
+  randomiseClip: 0
+  audioMixerGroup: {fileID: 8346736094946920384, guid: 8100d65377050c64e86e8f646631ed77,
+    type: 2}
+  loop: 0
+  PlayOnAwake: 0
+  volume: 1
+  pitch: 1
