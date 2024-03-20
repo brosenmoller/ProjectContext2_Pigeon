@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -666,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -133, y: -29}
+  m_AnchoredPosition: {x: -133, y: -32}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &257737181
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: gggggggggggg
+  m_text: Little pigeon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: On a sunny Utrecht day
+  m_text: On a rainy Utrecht day
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -1579,7 +1579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 227, y: -48}
+  m_AnchoredPosition: {x: 227, y: -59}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1937806913
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+  m_text: Hear what the refugees of Utrecht have to say! Help me publish their stories!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.939697, y: -3.2034302, z: -140.90515, w: -45.80005}
+  m_margin: {x: -52.939697, y: -3.2034302, z: -145.27527, w: -45.80005}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ggggggggggggggggggggggggggggggggggggggg
+  m_text: Will you help them be heard?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.939697, y: -3.2034302, z: -62.595703, w: 26.40747}
+  m_margin: {x: -54.32898, y: -3.2034302, z: -62.595703, w: 26.40747}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2072,7 +2072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -581, y: -22}
+  m_AnchoredPosition: {x: -581, y: -24}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2139488904
@@ -2116,8 +2116,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG\nGGGGGGGGGGGG\nGGGGGGGGGGGG\n  
-    GGGGGGGGGG"
+  m_text: 'Are these people blind to the hardships refugees face
+
+    in Utrecht?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -2181,7 +2182,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -2.206421, z: -98.23688, w: -97.83923}
+  m_margin: {x: 0, y: -2.206421, z: -66.56311, w: -117.9169}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
