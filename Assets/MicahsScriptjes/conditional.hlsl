@@ -10,7 +10,7 @@ void ChooseTex_float(float Red, Texture2D Tex1, Texture2D Tex2, Texture2D Tex3, 
     {
         Out = SAMPLE_TEXTURE2D(Tex2, SS, UV);
     }
-        if (Red >= 2 / TexNumber && Red < 3 / TexNumber)
+    if (Red >= 2 / TexNumber && Red < 3 / TexNumber)
     {
         Out = SAMPLE_TEXTURE2D(Tex3, SS, UV);
     }
