@@ -18,7 +18,6 @@ public class CutSceneView : UIView
     public void SetTextDirect(string text)
     {
         typingEffect.StopTypingEffect();
-        Debug.Log("SetTextDirect");
         dialogueText.text = text;
     }
 

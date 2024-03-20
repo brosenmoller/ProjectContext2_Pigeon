@@ -27,8 +27,6 @@ public class CutsceneManager : MonoBehaviour
 
     public void JournalistCompleted()
     {
-        // TODO: Newspaper Animation
-
         SetNextScene();
     }
 

@@ -13,6 +13,7 @@ public class CutsceneTrigger : MonoBehaviour
     [SerializeField] private float cutsceneLength;
     [SerializeField] private float subtitleDelay;
     [SerializeField] private bool requireKeyPressForNextLine;
+    [SerializeField] private float characterSpeed;
 
     [Header("References")]
     [SerializeField] private Transform cutsceneElements;
@@ -133,7 +134,7 @@ public class CutsceneTrigger : MonoBehaviour
             }
             else
             {
-                waitTime = 3.0f;
+                waitTime = storyLine.subtitle.Length * characterSpeed;
             }
 
             cutSceneView.SetText(storyLine.subtitle, waitTime);
@@ -164,6 +165,7 @@ public class CutsceneTrigger : MonoBehaviour
 
             if (continueToNext)
             {
+                yield return null;
                 continue;
             }
 
