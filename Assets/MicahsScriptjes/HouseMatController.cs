@@ -96,7 +96,7 @@ public class HouseColorController : MonoBehaviour
 
     private void OnDestroy()
     {
-        //GameManager.Instance.OnCityLevelChange += ChangeColors;
+        GameManager.Instance.OnCityLevelChange -= ChangeColors;
         ChangeColors(0);
     }
 }

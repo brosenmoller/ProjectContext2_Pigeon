@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroCutscene : MonoBehaviour
 {
@@ -61,6 +62,10 @@ public class IntroCutscene : MonoBehaviour
         }
         if(pressCount == 6) {
             text6.SetTrigger("play");
+        }
+        if (pressCount >= 7)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }
