@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PrototypeScene.unity
-    guid: 67e8674ee6593db4a8cfb9b46a74118b
+    path: Assets/Scenes/Twan_TitleScreen.unity
+    guid: 0201626813a34a545bbc5a59ce9496d3
+  - enabled: 1
+    path: Assets/Scenes/Twan_Intro.unity
+    guid: 011d69ed8331a0b4b9e1fc0ad46f0f1d
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: adfc0d535176e6e4c8b948bbaf112cb6
   m_configObjects: {}

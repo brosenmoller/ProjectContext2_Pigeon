@@ -163,6 +163,12 @@ public class BirdMovement : MonoBehaviour
 
     private void DefaultVelocity()
     {
+        if (Input.GetKey(KeyCode.Mouse2))
+        {
+            velocity = 1000f;
+            return;
+        }
+
         float distanceTillStraight = Mathf.Abs(transform.rotation.x - 90);
         float speedChangeMultiplier = Mathf.InverseLerp(0, 90, distanceTillStraight);
 
