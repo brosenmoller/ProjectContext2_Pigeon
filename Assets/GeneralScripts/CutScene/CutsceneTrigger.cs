@@ -22,8 +22,8 @@ public class CutsceneTrigger : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private AudioSource narrationSource;
 
-    private const float fadeMax = 1.5f;
-    private const float fadeMin = -1.5f;
+    public const float fadeMax = 1.5f;
+    public const float fadeMin = -1.5f;
     private const float timeScaleConst = 1f;
     private const float fixedDeltaTimeConst = 0.02f;
 

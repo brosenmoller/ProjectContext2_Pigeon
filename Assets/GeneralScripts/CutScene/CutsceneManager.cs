@@ -33,8 +33,9 @@ public class CutsceneManager : MonoBehaviour
     public void SetNextScene()
     {
         // Check if there are cutscenes left
-        if (currentSceneIndex >= cutscenes.Length) 
+        if (currentSceneIndex >= cutscenes.Length - 1) 
         {
+            GameManager.UIViewManager.Show(typeof(GameEndView));
             return;
         }
 

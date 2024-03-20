@@ -26,5 +26,4 @@ public class CutSceneView : UIView
 
     public void SetSprite(Sprite sprite) => characterPortrait.sprite = sprite;
     public void ResetSprite() => characterPortrait.sprite = null;
-
 }
