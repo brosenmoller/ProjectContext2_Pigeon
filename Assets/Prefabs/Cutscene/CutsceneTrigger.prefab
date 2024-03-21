@@ -1671,8 +1671,9 @@ MonoBehaviour:
   slowMotionIntensity: 0.724
   cutsceneDelay: 2
   cutsceneLength: 2
-  subtitleDelay: 0.5
+  subtitleDelay: 3
   requireKeyPressForNextLine: 0
+  characterSpeed: 0.05
   cutsceneElements: {fileID: 7197426919171139038}
   playerEndLocation: {fileID: 4317847362979920058}
   pillarRenderer: {fileID: 242942440198013943}

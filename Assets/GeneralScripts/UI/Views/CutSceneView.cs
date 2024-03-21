@@ -18,7 +18,6 @@ public class CutSceneView : UIView
     public void SetTextDirect(string text)
     {
         typingEffect.StopTypingEffect();
-        Debug.Log("SetTextDirect");
         dialogueText.text = text;
     }
 
@@ -27,5 +26,4 @@ public class CutSceneView : UIView
 
     public void SetSprite(Sprite sprite) => characterPortrait.sprite = sprite;
     public void ResetSprite() => characterPortrait.sprite = null;
-
 }

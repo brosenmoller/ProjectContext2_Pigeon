@@ -63,6 +63,7 @@ Material:
     - _Cull: 0
     - _DstBlend: 0
     - _Float: 0
+    - _Intensity: 7
     - _NoiseIntensity: 0.31
     - _NoisePower: -0.1
     - _NoiseScale: 50
