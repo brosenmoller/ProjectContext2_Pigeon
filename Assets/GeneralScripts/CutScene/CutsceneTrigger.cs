@@ -115,11 +115,12 @@ public class CutsceneTrigger : MonoBehaviour
 
     private IEnumerator StoryRoutine()
     {
-        cutSceneView.ResetText();
         cutSceneView.ResetSprite();
 
         foreach (Story.StoryLine storyLine in story.stories)
         {
+            cutSceneView.ResetText();
+
             if (storyLine.characterSprite != null)
             {
                 cutSceneView.SetSprite(storyLine.characterSprite);
