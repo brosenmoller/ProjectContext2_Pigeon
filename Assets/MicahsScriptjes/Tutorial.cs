@@ -33,14 +33,14 @@ public class Tutorial : MonoBehaviour
     {
         // instruction 1 (looking with mouse)
         SetText(messages[0]);
-        yield return new WaitForSeconds(1);
-        Vector2 mousePos = Input.mousePosition;
-        float distance = Vector2.Distance(mousePos, Input.mousePosition);
-        while (distance < maxDistance)
-        {
-            distance = Vector2.Distance(mousePos, Input.mousePosition);
-            yield return null;
-        }
+        yield return new WaitForSeconds(2);
+        //Vector2 mousePos = Input.mousePosition;
+        //float distance = Vector2.Distance(mousePos, Input.mousePosition);
+        //while (distance < maxDistance)
+        //{
+        //    distance = Vector2.Distance(mousePos, Input.mousePosition);
+        //    yield return null;
+        //}
         yield return new WaitForSeconds(1);
         SetText(messages[0]);
 
