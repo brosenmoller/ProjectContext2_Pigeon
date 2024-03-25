@@ -2079,7 +2079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926671301}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09625567, y: 0.45472574, z: -0.04951185, w: 0.8840294}
+  m_LocalRotation: {x: 0.09625568, y: 0.4547257, z: -0.049511846, w: 0.88402945}
   m_LocalPosition: {x: -665.0657, y: 267.5, z: 250.60991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2653,7 +2653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029057425}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09625567, y: 0.45472574, z: -0.04951185, w: 0.8840294}
+  m_LocalRotation: {x: 0.09625568, y: 0.4547257, z: -0.049511846, w: 0.88402945}
   m_LocalPosition: {x: -665.0657, y: 267.5, z: 250.60991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3495,6 +3495,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15508fb56f9baf4288695471cff9ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noiseIntensities:
+  - 5
+  - 4
+  - 2
+  - 0
   houseMats:
   - {fileID: 2100000, guid: b4871b15e3c1d5b429402563741d7c25, type: 2}
   - {fileID: 2100000, guid: c7dde220e32128d459593d39d9c9708d, type: 2}
@@ -3593,9 +3598,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261898474}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 633.9, y: 1038, z: -383}
-  m_LocalScale: {x: 2000, y: 1999.9995, z: 99999.97}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4193,11 +4198,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 81848057}
     m_Modifications:
+    - target: {fileID: 4169546389734293117, guid: 0538f74cf7ffc904c935be8c729aea26,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4871b15e3c1d5b429402563741d7c25, type: 2}
     - target: {fileID: 5402708518395403441, guid: 0538f74cf7ffc904c935be8c729aea26,
         type: 3}
       propertyPath: m_Name
       value: LevelDesignv4
       objectReference: {fileID: 0}
+    - target: {fileID: 6746128922928124963, guid: 0538f74cf7ffc904c935be8c729aea26,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4871b15e3c1d5b429402563741d7c25, type: 2}
     - target: {fileID: 8580940161264968404, guid: 0538f74cf7ffc904c935be8c729aea26,
         type: 3}
       propertyPath: m_LocalPosition.x
