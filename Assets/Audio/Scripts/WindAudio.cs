@@ -19,7 +19,10 @@ public class WindAudio : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         tunnelScript = movement.GetComponent<TunnelScript>();
+    }
 
+    private void Start()
+    {
         GameManager.Instance.OnCityLevelChange += TurnOffAudio;
     }
 
