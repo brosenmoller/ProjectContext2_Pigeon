@@ -1679,6 +1679,7 @@ MonoBehaviour:
   pillarRenderer: {fileID: 242942440198013943}
   virtualCamera: {fileID: 6057916069371905447}
   narrationSource: {fileID: 2702415029068628785}
+  writingSound: {fileID: 11400000, guid: 1e92de1daa6096f4e9fb96d9e9a66ce5, type: 2}
 --- !u!54 &3055976860872340592
 Rigidbody:
   m_ObjectHideFlags: 0

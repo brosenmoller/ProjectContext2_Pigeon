@@ -36,7 +36,7 @@ public class CutsceneManager : MonoBehaviour
         GameManager.Instance.InvokeCityLevelChange(currentSceneIndex);
 
         // Check if there are cutscenes left
-        if (currentSceneIndex >= cutscenes.Length - 1) 
+        if (currentSceneIndex >= cutscenes.Length) 
         {
             GameManager.UIViewManager.Show(typeof(GameEndView));
             return;

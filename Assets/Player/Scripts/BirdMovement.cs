@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum BirdMovementMode
 {
@@ -75,19 +76,49 @@ public class BirdMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        GameManager.InputManager.controls.GamePlay.Horizontal.performed += ctx => horizontal = ctx.ReadValue<float>();
-        GameManager.InputManager.controls.GamePlay.Verical.performed += ctx => vertical = ctx.ReadValue<float>();
-        GameManager.InputManager.controls.GamePlay.Horizontal.canceled += _ => horizontal = 0;
-        GameManager.InputManager.controls.GamePlay.Verical.canceled += _ => vertical = 0;
+        GameManager.InputManager.controls.GamePlay.Horizontal.performed += SetHorizontal;
+        GameManager.InputManager.controls.GamePlay.Verical.performed += SetVertical;
+        GameManager.InputManager.controls.GamePlay.Horizontal.canceled += ResetHorizontal;
+        GameManager.InputManager.controls.GamePlay.Verical.canceled += ResetVertical;
 
-        GameManager.InputManager.controls.GamePlay.CameraLook.performed += ctx => look = ctx.ReadValue<Vector2>();
-        GameManager.InputManager.controls.GamePlay.CameraLook.canceled += _ => look = Vector2.zero;
+        GameManager.InputManager.controls.GamePlay.CameraLook.performed += SetLook;
+        GameManager.InputManager.controls.GamePlay.CameraLook.canceled += ResetLook;
 
-        GameManager.InputManager.controls.GamePlay.Forward.performed += _ => isMoving = false;
-        GameManager.InputManager.controls.GamePlay.Forward.canceled += _ => isMoving = true;
+        GameManager.InputManager.controls.GamePlay.Forward.performed += ResetIsMoving;
+        GameManager.InputManager.controls.GamePlay.Forward.canceled += SetIsMoving;
 
-        GameManager.InputManager.controls.GamePlay.Boost.performed += _ => StartBoost();
-    
+        GameManager.InputManager.controls.GamePlay.Boost.performed += StartBoost;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.InputManager.controls.GamePlay.Horizontal.performed -= SetHorizontal;
+        GameManager.InputManager.controls.GamePlay.Verical.performed -= SetVertical;
+        GameManager.InputManager.controls.GamePlay.Horizontal.canceled -= ResetHorizontal;
+        GameManager.InputManager.controls.GamePlay.Verical.canceled -= ResetVertical;
+
+        GameManager.InputManager.controls.GamePlay.CameraLook.performed -= SetLook;
+        GameManager.InputManager.controls.GamePlay.CameraLook.canceled -= ResetLook;
+
+        GameManager.InputManager.controls.GamePlay.Forward.performed -= ResetIsMoving;
+        GameManager.InputManager.controls.GamePlay.Forward.canceled -= SetIsMoving;
+
+        GameManager.InputManager.controls.GamePlay.Boost.performed -= StartBoost;
+    }
+
+    private void SetHorizontal(InputAction.CallbackContext ctx) => horizontal = ctx.ReadValue<float>();
+    private void SetVertical(InputAction.CallbackContext ctx) => vertical = ctx.ReadValue<float>();
+    private void ResetHorizontal(InputAction.CallbackContext ctx) => horizontal = 0;
+    private void ResetVertical(InputAction.CallbackContext ctx) => vertical = 0;
+    private void SetLook(InputAction.CallbackContext ctx) => look = ctx.ReadValue<Vector2>();
+    private void ResetLook(InputAction.CallbackContext ctx) => look = Vector2.zero;
+
+    private void SetIsMoving(InputAction.CallbackContext ctx) => isMoving = true;
+    private void ResetIsMoving(InputAction.CallbackContext ctx) => isMoving = false;
+    private void StartBoost(InputAction.CallbackContext callbackContext)
+    {
+        if (inBoost) { return; }
+        StartCoroutine(Boost());
     }
 
     private void Update()
@@ -100,13 +131,6 @@ public class BirdMovement : MonoBehaviour
             case BirdMovementMode.Tracking: TrackingRotation(); CalculateVelocity(); break;
         }
     }
-
-    private void StartBoost()
-    {
-        if (inBoost) { return; }
-        StartCoroutine(Boost());
-    }
-        
 
     private void BasicMovement()
     {
@@ -193,6 +217,8 @@ public class BirdMovement : MonoBehaviour
 
     private IEnumerator Boost()
     {
+        inBoost = true;
+
         if (velocity < minSpeed) { velocity = minSpeed; }
 
         boostVelocityIncrease = velocity * boostStrength;
@@ -205,8 +231,6 @@ public class BirdMovement : MonoBehaviour
             maxSpeed += boostAcceleration * Time.deltaTime;
             yield return null;
         }
-
-        inBoost = true;
 
         yield return new WaitForSeconds(boostDuration);
 
