@@ -32,16 +32,17 @@ public class CutsceneManager : MonoBehaviour
 
     public void SetNextScene()
     {
+        currentSceneIndex++;
+        GameManager.Instance.InvokeCityLevelChange(currentSceneIndex);
+
         // Check if there are cutscenes left
-        if (currentSceneIndex >= cutscenes.Length - 1) 
+        if (currentSceneIndex >= cutscenes.Length) 
         {
             GameManager.UIViewManager.Show(typeof(GameEndView));
             return;
         }
 
         // Set scene according to array order
-        currentSceneIndex++;
-        GameManager.Instance.InvokeCityLevelChange(currentSceneIndex);
         for (int i = 0; i < cutscenes.Length; i++)
         {
             if (currentSceneIndex == i)

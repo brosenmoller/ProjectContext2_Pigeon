@@ -727,6 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3279698711114484136}
   - component: {fileID: 5487868927902457501}
+  - component: {fileID: 4626259136299649682}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -773,6 +774,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4626259136299649682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2351263124431311452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1814a830690540bc1619220f424bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flapSound: {fileID: 11400000, guid: b4cba35eee36a9e47ae163286af90522, type: 2}
 --- !u!1 &2746920756542938550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1708,8 @@ MonoBehaviour:
   deathParticles: {fileID: 525038324136521209, guid: 883614c58a4d3704db35a0e5c37c65d5,
     type: 3}
   body: {fileID: 8717741401629189442}
+  deathSound: {fileID: 0}
+  respawnSound: {fileID: 0}
 --- !u!136 &1576043333497391610
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class AudioObject : ScriptableObject
         Source.Play();
 
         GameManager.Instance.StartCoroutine(
-            GameManager.AudioManager.FadeAudio(Source, targetVolume, fadeDuration)
+            GameManager.AudioManager.FadeAudio(Source, fadeDuration, targetVolume)
         );
     }
 
@@ -68,7 +68,7 @@ public class AudioObject : ScriptableObject
         Source.volume = startVolume;
 
         GameManager.Instance.StartCoroutine(
-            GameManager.AudioManager.FadeAudio(Source, targetVolume, fadeDuration, Stop)
+            GameManager.AudioManager.FadeAudio(Source, fadeDuration, targetVolume, Stop)
         );
     }
 

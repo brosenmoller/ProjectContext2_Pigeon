@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HouseColorController : MonoBehaviour
 {
+    [SerializeField] private float[] noiseIntensities;
     [SerializeField] private Material[] houseMats;
     [Header("House 1 Colors")]
     [Space(16)]
@@ -31,6 +30,8 @@ public class HouseColorController : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnCityLevelChange += ChangeColors;
+        GameManager.Instance.OnCityLevelChange += ChangeNoiseIntensity;
+        ChangeNoiseIntensity(0);
         ChangeColors(0);
     }
     private void Update()
@@ -51,6 +52,15 @@ public class HouseColorController : MonoBehaviour
             }
         }
     }
+
+    private void ChangeNoiseIntensity(int level)
+    {
+        for (int i = 0; i < houseMats.Length; i++)
+        {
+            houseMats[i].SetFloat("_NoiseIntensity", noiseIntensities[level]);
+        }
+    }
+
     public void ChangeColors(int phaseIndex)
     {
         if (phaseIndex > 2)
@@ -97,6 +107,6 @@ public class HouseColorController : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.Instance.OnCityLevelChange -= ChangeColors;
-        ChangeColors(0);
+        GameManager.Instance.OnCityLevelChange -= ChangeNoiseIntensity;
     }
 }

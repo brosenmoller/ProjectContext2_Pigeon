@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (movement.transform.position.y > head.position.y || tunnelScript.insideTunnel)
+        if (movement.transform.position.y > head.position.y + 1.0f || tunnelScript.insideTunnel)
         {
             animator.SetBool(DIVE, true);
         }

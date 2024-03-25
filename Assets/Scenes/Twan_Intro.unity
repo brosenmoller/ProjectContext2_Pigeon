@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DFGAADF
+  m_text: "Home \nscarcity?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -551,9 +551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'products,
-
-    and? featuring Cupcakke'
+  m_text: Due to refugees?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -587,7 +585,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -744,7 +742,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1204,7 +1202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c3fb37de8c388f4599bf016776b5e95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4afcc0d969d4e8d40b2087c34ce02bb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1278,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196.4, y: 281}
+  m_AnchoredPosition: {x: -196.4, y: 283}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1852856194
@@ -1322,7 +1320,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+  m_text: in other news! Concerns rising about citizens of Utrecht falling victim
+    to home scarcity due to refugees
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -1356,7 +1355,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1386,7 +1385,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -78.97327, z: 0, w: -89.78339}
+  m_margin: {x: -6.1897583, y: -78.97327, z: -13.122681, w: -89.78339}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1657,7 +1656,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1993,7 +1992,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2072,7 +2071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -581, y: -24}
+  m_AnchoredPosition: {x: -569, y: -22}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2139488904
@@ -2116,9 +2115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are these people blind to the hardships refugees face
-
-    in Utrecht?'
+  m_text: "Don't these people see that refugees are \nalso just \npeople like us?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2951dc32b10ef39408a6407803ceaebd, type: 2}
   m_sharedMaterial: {fileID: 584591270008296586, guid: 2951dc32b10ef39408a6407803ceaebd,
@@ -2152,7 +2149,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

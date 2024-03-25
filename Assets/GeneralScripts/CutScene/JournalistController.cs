@@ -39,7 +39,6 @@ public class JournalistController : MonoBehaviour
         isActive = true;
         visuals.SetActive(true);
         triggerCollider.enabled = true;
-        StartCoroutine(JournalistWalking());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,8 +66,9 @@ public class JournalistController : MonoBehaviour
     private IEnumerator MoveTowards(Vector3 targetPosition)
     {
         Vector3 direction = (targetPosition - transform.position).normalized;
+        Debug.Log((transform.position - targetPosition).sqrMagnitude);
 
-        while ((transform.position - targetPosition).sqrMagnitude > 0.02f)
+        while ((transform.position - targetPosition).sqrMagnitude > 0.1f)
         {
             transform.Translate(moveSpeed * Time.deltaTime * direction);
             yield return null;

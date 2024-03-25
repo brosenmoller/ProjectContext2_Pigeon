@@ -21,6 +21,7 @@ public class CutsceneTrigger : MonoBehaviour
     [SerializeField] private MeshRenderer pillarRenderer;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private AudioSource narrationSource;
+    [SerializeField] private AudioObject writingSound;
 
     public const float fadeMax = 1.5f;
     public const float fadeMin = -1.5f;
@@ -115,11 +116,12 @@ public class CutsceneTrigger : MonoBehaviour
 
     private IEnumerator StoryRoutine()
     {
-        cutSceneView.ResetText();
         cutSceneView.ResetSprite();
 
         foreach (Story.StoryLine storyLine in story.stories)
         {
+            cutSceneView.ResetText();
+
             if (storyLine.characterSprite != null)
             {
                 cutSceneView.SetSprite(storyLine.characterSprite);
@@ -138,10 +140,13 @@ public class CutsceneTrigger : MonoBehaviour
             }
 
             cutSceneView.SetText(storyLine.subtitle, waitTime);
+
+            writingSound.PlayFadeIn(0.2f, 0, .7f);
             
             float timer = 0;
             bool textCompleted = false;
             bool continueToNext = false;
+            bool startedFadeOut = false;
             while (timer < waitTime + subtitleDelay)
             {
                 timer += Time.deltaTime;
@@ -155,13 +160,21 @@ public class CutsceneTrigger : MonoBehaviour
                     }
                     else
                     {
+                        writingSound.StopFadeOut(0.1f, writingSound.volume);
                         cutSceneView.SetTextDirect(storyLine.subtitle);
                         textCompleted = true;
                     }
                 }
 
+                if (timer > waitTime && !startedFadeOut)
+                {
+                    startedFadeOut = true;
+                    writingSound.StopFadeOut(0.2f, writingSound.volume);
+                }
+
                 yield return null;
             }
+            
 
             if (continueToNext)
             {

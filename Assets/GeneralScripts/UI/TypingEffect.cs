@@ -22,6 +22,7 @@ public class TypingEffect : MonoBehaviour
     public void ResetText()
     {
         textMeshPro.text = "";
+        StopTypingEffect();
     }
 
     public void StopTypingEffect()

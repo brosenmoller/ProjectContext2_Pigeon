@@ -21,6 +21,25 @@ public class WindAudio : MonoBehaviour
         tunnelScript = movement.GetComponent<TunnelScript>();
     }
 
+    private void Start()
+    {
+        GameManager.Instance.OnCityLevelChange += TurnOffAudio;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnCityLevelChange -= TurnOffAudio;
+    }
+
+    private void TurnOffAudio(int level)
+    {
+        if (level == 3) 
+        {
+            audioSource.volume = 0;
+            enabled = false;
+        }
+    }
+
     private void Update()
     {
         if (tunnelScript.insideTunnel && !wasInsideTunnel)
