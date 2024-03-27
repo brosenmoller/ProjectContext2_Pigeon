@@ -27,6 +27,7 @@ public class AudioLevelObject : MonoBehaviour
     {
         if (level >= volumeLevels.Length)
         {
+            GameManager.AudioManager.FadeAudio(audioSource, fadeDuration, 0);
             return;
         }
 
