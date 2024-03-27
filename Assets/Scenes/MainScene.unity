@@ -4414,7 +4414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Any key to continue
+  m_text: Press Space to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13890f66f7d4e1c43a049bea57ef60a8, type: 2}
   m_sharedMaterial: {fileID: 7544724804837495459, guid: 13890f66f7d4e1c43a049bea57ef60a8,

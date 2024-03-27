@@ -22,15 +22,17 @@ MonoBehaviour:
       soon. '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: 'Four years ago I arrived here in the Netherlands as a victim of human
-      trafficking. I was forced into prostitution and during this time I got pregnant. '
+  - subtitle: 'Four years ago I was a victim of human trafficking and was taken to
+      The Netherlands. I was forced into prostitution and during this time I got
+      pregnant. '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: 'When we applied, the Immigration Service did not take being gay as
-      a valid reason to stay in the country and refused to give me a residence permit. '
+  - subtitle: 'When I finally left the prostitution I applied to the Immigration
+      Service as a refugee.  '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
-  - subtitle: 'They sent me to a deportation center, but I went into appeal.  '
+  - subtitle: 'They did not take being gay as a valid reason to stay in the country
+      and refused to give me a residence permit. '
     audioClip: {fileID: 0}
     characterSprite: {fileID: 0}
   - subtitle: 'STILL, an organization that aids people without documents, supported

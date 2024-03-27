@@ -33,7 +33,7 @@ public class GameEndView : UIView
         player.enabled = false;
         fadeController.fadeTarget = CutsceneTrigger.fadeMax;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(4);
 
         endVirtualCamera.Priority = 100;
         thankYouForPlayingText.enabled = true;
@@ -46,7 +46,7 @@ public class GameEndView : UIView
 
         while (true)
         {
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(0);
             }
